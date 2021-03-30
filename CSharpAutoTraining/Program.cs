@@ -16,7 +16,7 @@ namespace Curs1
             //Console.WriteLine(browser.WindowWidth);
 
 
-            Console.WriteLine("Hello world");
+            Console.WriteLine("Hello world test");
             Console.ReadKey();
         }
     }
