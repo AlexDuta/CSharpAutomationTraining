@@ -7,7 +7,7 @@ namespace Curs1
         static void Main(string[] args)
         {
             // simple Hello World program in C#
-            Console.WriteLine("Hello world");
+            Console.WriteLine("Hello world update");
             Console.ReadKey();
         }
     }
