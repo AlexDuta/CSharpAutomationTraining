@@ -10,6 +10,7 @@ namespace CSharpAutoTraining.Curs1
     {
         //variable
         public int WindowWidth = 1024;
+        public int Height;
 
         public Browser()
         {
@@ -25,6 +26,18 @@ namespace CSharpAutoTraining.Curs1
         public void ChangeWindowWidth(int newWindowWidth)
         {
             WindowWidth = newWindowWidth;
+        }
+
+        public void ChangeWindowHeight(int newHeight)
+        {
+            Height = newHeight;
+        }
+
+        public void DisplayWidthAndHeight()
+        {
+            Console.WriteLine("The new Browser resolution is: ");
+            Console.WriteLine("Width: " + WindowWidth);
+            Console.WriteLine("Height: " + Height);
         }
     }
 }
