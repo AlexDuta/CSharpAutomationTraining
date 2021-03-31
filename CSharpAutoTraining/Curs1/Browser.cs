@@ -17,15 +17,16 @@ namespace CSharpAutoTraining.Curs1
 
         }
 
-        public Browser(int newWindowWidth)
+        public Browser(int newWindowWidth, int newWindowHeight)
         {
             WindowWidth = newWindowWidth;
+            WindowHeight = newWindowHeight;
         }
 
         //method
-        public void ChangeWindowHeight(int newWindowHwight)
+        public void ChangeWindowHeight(int newWindowHeight)
         {
-            WindowHeight = newWindowHwight;
+            WindowHeight = newWindowHeight;
         }
 
         public void ChangeWindowWidth(int newWindowWidth)
