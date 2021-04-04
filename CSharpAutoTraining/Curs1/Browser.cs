@@ -10,7 +10,7 @@ namespace CSharpAutoTraining.Curs1
     {
         public int Height;
         public int Width;
-        
+
         public void ChangeWindowHeight(int newHeight)
         {
             Height = newHeight;

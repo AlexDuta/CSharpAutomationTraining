@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using CSharpAutoTraining.Curs1;
 
-namespace CSharpAutoTraining.Curs1
+namespace C.Curs1
 {
     class Test
     {
-        public static void Main(String[] args)
+        public static void Main<Curs1>(String[] args)
         {
             Browser browser = new Browser();
             browser.ChangeWindowHeight(1080);
