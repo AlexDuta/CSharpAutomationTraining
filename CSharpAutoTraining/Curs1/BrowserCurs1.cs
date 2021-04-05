@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs1
 {
-    class Browser
+    class BrowserCurs1
     {
         //variable
         public int Height = 0;

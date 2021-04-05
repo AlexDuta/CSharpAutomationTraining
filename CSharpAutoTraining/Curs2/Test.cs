@@ -12,7 +12,7 @@ namespace CSharpAutoTraining.Curs2
 {
     class Test
     {
-        public static void Main(string[] args)
+        public static void MainCurs2(string[] args)
         {
             Browser browser = new Browser();
             Firefox firefox = new Firefox();
