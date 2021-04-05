@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSharpAutoTraining.C
+{
+    class Chrome
+    {
+        public int WindowWidth_int;
+        public string WindowWidth_string;
+        public double WindowWidth_double;
+
+        public void DisplayWidowWidth()
+        {
+            if(WindowWidth_int > 1920)
+            {
+                Console.WriteLine(WindowWidth_int);
+            } else
+            {
+                Console.WriteLine("Window width less than 1920");
+            }
+        }
+    }
+ }
