@@ -45,6 +45,11 @@
   <ItemGroup>
     <Compile Include="Curs1\Browser.cs" />
     <Compile Include="Curs1\Test.cs" />
+    <Compile Include="Curs2\Browser.cs" />
+    <Compile Include="Curs2\Chrome.cs" />
+    <Compile Include="Curs2\Firefox.cs" />
+    <Compile Include="Curs2\InternetExplorer.cs" />
+    <Compile Include="Curs2\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
