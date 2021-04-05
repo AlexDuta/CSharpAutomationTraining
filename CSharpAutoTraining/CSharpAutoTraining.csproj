@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CSharpAutoTraining.Curs3.Test_Curs3</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,13 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Curs1\Browser.cs" />
-    <Compile Include="Curs1\Test.cs" />
-    <Compile Include="Curs2\Browser.cs" />
-    <Compile Include="Curs2\Chrome.cs" />
-    <Compile Include="Curs2\Firefox.cs" />
-    <Compile Include="Curs2\InternetExplorer.cs" />
-    <Compile Include="Curs2\Test.cs" />
+    <Compile Include="Curs1\Browser_Curs1.cs" />
+    <Compile Include="Curs1\Test_Curs1.cs" />
+    <Compile Include="Curs2\Browser_Curs2.cs" />
+    <Compile Include="Curs2\Chrome_Curs2.cs" />
+    <Compile Include="Curs2\Firefox_Curs2.cs" />
+    <Compile Include="Curs2\InternetExplorer_Curs2.cs" />
+    <Compile Include="Curs2\Test_Curs2.cs" />
+    <Compile Include="Curs3\Browser_Curs3.cs" />
+    <Compile Include="Curs3\Chrome_Curs3.cs" />
+    <Compile Include="Curs3\Edge.cs" />
+    <Compile Include="Curs3\FireFox_Curs3.cs" />
+    <Compile Include="Curs3\InternetExplorer_Curs3.cs" />
+    <Compile Include="Curs3\Test_Curs3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

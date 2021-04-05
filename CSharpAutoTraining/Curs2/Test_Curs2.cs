@@ -11,7 +11,7 @@ using CSharpAutoTraining.D;
 
 namespace CSharpAutoTraining.Curs2
 {
-    class Test
+    class Test_Curs2
     {
         static void Main(string[] args)
         {
@@ -43,7 +43,7 @@ namespace CSharpAutoTraining.Curs2
             internetExplorer.WindowWidth_int = 1920;
             internetExplorer.DisplayThreeTimesWindowFrame();
 
-            Console.ReadLine();
+            Console.ReadKey();
 
         }
     }

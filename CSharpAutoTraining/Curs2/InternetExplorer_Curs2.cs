@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.D
 {
@@ -14,19 +10,21 @@ namespace CSharpAutoTraining.D
 
         public void DisplayThreeTimesWindowFrame()
         {
-            if(WindowWidth_int > 1920) { 
-                for(int i = 0; i < 3; i++)
+            if (WindowWidth_int > 1920)
+            {
+                for (int i = 0; i < 3; i++)
                 {
                     Console.WriteLine($"Window width is higher than 1920: {WindowWidth_int}");
                 }
-            } else
+            }
+            else
             {
-                for(int i = 0; i < 2; i++)
+                for (int i = 0; i < 2; i++)
                 {
                     Console.WriteLine($"Windows width is less than 1920 : { WindowWidth_int}");
                 }
             }
-            
+
         }
     }
 }
