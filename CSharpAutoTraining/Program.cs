@@ -4,6 +4,8 @@ using B;
 using C;
 using D;
 using CSharpAutoTraining.Curs3;
+using CSharpAutoTraining.Curs4;
+using CSharpAutoTraining.Curs5;
 
 namespace Curs1
 {
@@ -11,6 +13,28 @@ namespace Curs1
     {
         static void Main(String[] args)
         {
+            //testare exercitii de la cursul 5
+            Console.WriteLine("Exercitii cursul 5");
+            BrowserCurs5 browserCurs5 = new BrowserCurs5();
+            browserCurs5.SendTextToElement();
+
+            BrowserCurs5Internal browserCurs5Internal = new BrowserCurs5Internal();
+            browserCurs5Internal.SendTextToElement();
+
+            BrowserCurs5Private browserCurs5Private = new BrowserCurs5Private();
+            //browserCurs5Private. can not call method because is private
+            //testare exercitii de la cursul 4
+            Console.WriteLine("\n Exercitii cursul 4");
+            FirefoxCurs4 firefox = new FirefoxCurs4();
+            firefox.WindowWidth = 1000;
+            firefox.StartBrowser();
+            firefox.About();
+            firefox.Ping();
+
+            SkypeCurs4 skype = new SkypeCurs4();
+            skype.About();
+            skype.Ping();
+            /**
             // testare exercitii de la cursul 2
             Console.WriteLine("Exercitii cursul 2");
             Browser browser = new Browser();
@@ -60,6 +84,7 @@ namespace Curs1
             edgeCurs3.ChangeWindowWidth(1860);
             edgeCurs3.Version = 1;
             edgeCurs3.NewFutureFunction();
+            **/
             Console.ReadKey();
         }
     }
