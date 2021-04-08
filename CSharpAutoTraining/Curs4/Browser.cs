@@ -12,7 +12,7 @@ namespace CSharpAutoTraining.Curs4
         public int WindowWidth {
             get { return windowWidth; }
             set {
-                if (value < 1024 && value > 1920) {
+                if (value <= 1024 && value >= 1920) {
                     Console.WriteLine("The value is not between 1024 and 1920");
                 }else {
                     windowWidth = value;
