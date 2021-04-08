@@ -24,7 +24,7 @@ namespace Curs1
             BrowserCurs5Private browserCurs5Private = new BrowserCurs5Private();
             //browserCurs5Private. can not call method because is private
             //testare exercitii de la cursul 4
-            Console.WriteLine("\n Exercitii cursul 4");
+            Console.WriteLine("\nExercitii cursul 4");
             FirefoxCurs4 firefox = new FirefoxCurs4();
             firefox.WindowWidth = 1000;
             firefox.StartBrowser();
