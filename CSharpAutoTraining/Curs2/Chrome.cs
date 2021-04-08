@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Curs1.Curs2
 {
-    class Chrome
+    class Chrome :Browser
     {
         public int WindowWidth_int;
         public string WindowWidth_string;

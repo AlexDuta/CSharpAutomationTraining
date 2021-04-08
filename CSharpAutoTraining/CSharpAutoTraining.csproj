@@ -45,6 +45,17 @@
   <ItemGroup>
     <Compile Include="Curs1\Browser.cs" />
     <Compile Include="Curs1\Test.cs" />
+    <Compile Include="Curs3\Browser_Curs31.cs" />
+    <Compile Include="Curs3\Chrome_Curs31.cs" />
+    <Compile Include="Curs3\Edge_Curs31.cs" />
+    <Compile Include="Curs3\Firefox_Curs31.cs" />
+    <Compile Include="Curs3\InternetExplorer_Curs3.cs" />
+    <Compile Include="Curs4\Browser.cs" />
+    <Compile Include="Curs4\Firefox.cs" />
+    <Compile Include="Curs4\Component.cs" />
+    <Compile Include="Curs4\Network.cs" />
+    <Compile Include="Curs4\Skype.cs" />
+    <Compile Include="Curs4\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,12 +66,7 @@
     <Compile Include="Curs2\Main.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Curs3\Browser_Curs3.cs" />
-    <Compile Include="Curs3\Chrome_Curs3.cs" />
-    <Compile Include="Curs3\Firefox_Curs3.cs" />
-    <Compile Include="Curs3\InternetExplorer.cs" />
     <Compile Include="Curs3\Test.cs" />
-    <Compile Include="Curs3\Edge_Curs3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

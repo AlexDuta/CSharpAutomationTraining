@@ -1,11 +1,9 @@
-﻿using System;
+﻿
+using System;
+internal class Browser_Curs3
 
-public class Class1
 {
-	public Class1()
-	{
-
-         public int WindowWidth_int;
+    public int WindowWidth_int;
     public string WindowWidth_string;
 
     public virtual void ChangeWindowWidth(int val)
