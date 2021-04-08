@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Beagle.cs" />
+    <Compile Include="Caine.cs" />
     <Compile Include="Curs1\Browser.cs" />
     <Compile Include="Curs1\Test.cs" />
     <Compile Include="Curs2\Browser.cs" />
@@ -54,6 +56,16 @@
     <Compile Include="Curs3\Edge.cs" />
     <Compile Include="Curs3\FirefoxCurs3_2.cs" />
     <Compile Include="Curs3\InternetExplorerCurs3_4.cs" />
+    <Compile Include="Curs4\Browser.cs" />
+    <Compile Include="Curs4\Firefox.cs" />
+    <Compile Include="Curs4\IComponent.cs" />
+    <Compile Include="Curs4\INetwork.cs" />
+    <Compile Include="Curs4\Skype.cs" />
+    <Compile Include="Curs5\Browser.cs" />
+    <Compile Include="Curs5\BrowserCurs5_1.cs" />
+    <Compile Include="Curs5\BrowserCurs5_2.cs" />
+    <Compile Include="Curs5\BrowserHelper.cs" />
+    <Compile Include="Curs5\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
