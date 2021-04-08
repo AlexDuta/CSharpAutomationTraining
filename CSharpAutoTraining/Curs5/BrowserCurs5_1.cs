@@ -21,7 +21,7 @@ namespace CSharpAutoTraining.Curs5
             finally
             {
                 BrowserHelper.PathImage = "path";
-                Console.WriteLine("Path image has been set: " + BrowserHelper.PathImage);
+                Console.WriteLine("Path image is: " + BrowserHelper.PathImage);
             }
 
         }
