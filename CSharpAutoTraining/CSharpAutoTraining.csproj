@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CSharpAutoTraining.Curs3.Test_Curs3</StartupObject>
+    <StartupObject>CSharpAutoTraining.Curs4.Test_Curs4</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,6 +59,12 @@
     <Compile Include="Curs3\FireFox_Curs3.cs" />
     <Compile Include="Curs3\InternetExplorer_Curs3.cs" />
     <Compile Include="Curs3\Test_Curs3.cs" />
+    <Compile Include="Curs4\Browser_Curs4.cs" />
+    <Compile Include="Curs4\Firefox_Curs4.cs" />
+    <Compile Include="Curs4\IComponent.cs" />
+    <Compile Include="Curs4\INetwork.cs" />
+    <Compile Include="Curs4\Skype.cs" />
+    <Compile Include="Curs4\Test_Curs4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
