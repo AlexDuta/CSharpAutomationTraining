@@ -43,9 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Browser.cs" />
-    <Compile Include="Test.cs" />
+    <Compile Include="Curs1\Browser.cs" />
+    <Compile Include="Curs1\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Curs2\Browser.cs" />
+    <Compile Include="Curs2\Chrome.cs" />
+    <Compile Include="Curs2\Firefox.cs" />
+    <Compile Include="Curs2\InternetExplorer.cs" />
+    <Compile Include="Curs2\Main.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Curs3\Browser_Curs3.cs" />
+    <Compile Include="Curs3\Chrome_Curs3.cs" />
+    <Compile Include="Curs3\Firefox_Curs3.cs" />
+    <Compile Include="Curs3\InternetExplorer.cs" />
+    <Compile Include="Curs3\Test.cs" />
+    <Compile Include="Curs3\Edge_Curs3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
