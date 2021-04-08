@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs3
 {
-    class Chrome_Curs3 : Browser_Curs3
+    class FireFoxCurs3 : BrowserCurs3
     {
-        public void ChangeWindowWidth(string val)
+
+        public string Profile;
+        public void SetProfile(string profileName)
         {
-            this.WindowWidth_string = val;
+            this.Profile = profileName;
         }
     }
 }

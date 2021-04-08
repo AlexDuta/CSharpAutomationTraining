@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs4
 {
-    class Firefox_Curs4 : Browser_Curs4 , IComponent, INetwork
+    class FirefoxCurs4 : BrowserCurs4 , IComponent, INetwork
     {
 
         public override void StartBrowser()

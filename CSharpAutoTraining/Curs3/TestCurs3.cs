@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs3
 {
-    class Test_Curs3
+    class TestCurs3
     {
         static void Main(string[] args)
         {
-            FireFox_Curs3 fireFox = new FireFox_Curs3();
-            Chrome_Curs3 chrome = new Chrome_Curs3();
+            FireFoxCurs3 fireFox = new FireFoxCurs3();
+            ChromeCurs3 chrome = new ChromeCurs3();
             InternetExplorer_Curs3 internetExplorer = new InternetExplorer_Curs3();
             Edge edge = new Edge();
 

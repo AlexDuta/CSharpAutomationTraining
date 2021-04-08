@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs3
 {
-    class InternetExplorer_Curs3 : Browser_Curs3
+    class InternetExplorer_Curs3 : BrowserCurs3
     {
         public override void ChangeWindowWidth(int val)
         {

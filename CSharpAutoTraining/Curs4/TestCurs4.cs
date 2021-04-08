@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs4
 {
-    class Test_Curs4
+    class TestCurs4
     {
         static void Main(string[] args)
         {
             // Browser_Curs4 browser = new Browser_Curs4();
-            Firefox_Curs4 firefox = new Firefox_Curs4();
+            FirefoxCurs4 firefox = new FirefoxCurs4();
             Skype skype = new Skype();
 
             firefox.WindowWidth = 1920;

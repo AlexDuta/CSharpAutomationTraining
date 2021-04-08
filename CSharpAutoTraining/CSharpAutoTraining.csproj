@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CSharpAutoTraining.Curs4.Test_Curs4</StartupObject>
+    <StartupObject>CSharpAutoTraining.Curs5.TestCurs5</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,25 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Curs1\Browser_Curs1.cs" />
-    <Compile Include="Curs1\Test_Curs1.cs" />
-    <Compile Include="Curs2\Browser_Curs2.cs" />
-    <Compile Include="Curs2\Chrome_Curs2.cs" />
-    <Compile Include="Curs2\Firefox_Curs2.cs" />
-    <Compile Include="Curs2\InternetExplorer_Curs2.cs" />
-    <Compile Include="Curs2\Test_Curs2.cs" />
-    <Compile Include="Curs3\Browser_Curs3.cs" />
-    <Compile Include="Curs3\Chrome_Curs3.cs" />
+    <Compile Include="Curs1\BrowserCurs1.cs" />
+    <Compile Include="Curs1\TestCurs1.cs" />
+    <Compile Include="Curs2\BrowserCurs2.cs" />
+    <Compile Include="Curs2\ChromeCurs2.cs" />
+    <Compile Include="Curs2\FirefoxCurs2.cs" />
+    <Compile Include="Curs2\InternetExplorerCurs2.cs" />
+    <Compile Include="Curs2\TestCurs2.cs" />
+    <Compile Include="Curs3\BrowserCurs3.cs" />
+    <Compile Include="Curs3\ChromeCurs3.cs" />
     <Compile Include="Curs3\Edge.cs" />
-    <Compile Include="Curs3\FireFox_Curs3.cs" />
+    <Compile Include="Curs3\FireFoxCurs3.cs" />
     <Compile Include="Curs3\InternetExplorer_Curs3.cs" />
-    <Compile Include="Curs3\Test_Curs3.cs" />
-    <Compile Include="Curs4\Browser_Curs4.cs" />
-    <Compile Include="Curs4\Firefox_Curs4.cs" />
+    <Compile Include="Curs3\TestCurs3.cs" />
+    <Compile Include="Curs4\BrowserCurs4.cs" />
+    <Compile Include="Curs4\FirefoxCurs4.cs" />
     <Compile Include="Curs4\IComponent.cs" />
     <Compile Include="Curs4\INetwork.cs" />
     <Compile Include="Curs4\Skype.cs" />
-    <Compile Include="Curs4\Test_Curs4.cs" />
+    <Compile Include="Curs4\TestCurs4.cs" />
+    <Compile Include="Curs5\BrowserCurs5.cs" />
+    <Compile Include="Curs5\BrowserCurs5_1.cs" />
+    <Compile Include="Curs5\BrowserCurs5_2.cs" />
+    <Compile Include="Curs5\BrowserHelp.cs" />
+    <Compile Include="Curs5\TestCurs5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

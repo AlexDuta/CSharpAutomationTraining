@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs1
 {
-    class Browser_Curs1
+    class BrowserCurs1
     {
         //variable
         public int WindowWidth = 1024;
         public int Height;
 
-        public Browser_Curs1()
+        public BrowserCurs1()
         {
 
         }
 
-        public Browser_Curs1(int newWindowWidth)
+        public BrowserCurs1(int newWindowWidth)
         {
             WindowWidth = newWindowWidth;
         }

@@ -11,7 +11,7 @@ using CSharpAutoTraining.D;
 
 namespace CSharpAutoTraining.Curs2
 {
-    class Test_Curs2
+    class TestCurs2
     {
         static void Main(string[] args)
         {

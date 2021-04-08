@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs4
 {
-    public abstract class Browser_Curs4
+    public abstract class BrowserCurs4
     {
         private int windowWidth;
 

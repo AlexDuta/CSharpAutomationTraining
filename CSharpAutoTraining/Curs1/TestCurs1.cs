@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs1
 {
-    class Test_Curs1
+    class TestCurs1
     {
 
         static void Main(string[] args)
         {
-            var browser = new Browser_Curs1();
+            var browser = new BrowserCurs1();
             browser.ChangeWindowHeight(1080);
             browser.ChangeWindowWidth(1920);
             browser.DisplayWidthAndHeight();
