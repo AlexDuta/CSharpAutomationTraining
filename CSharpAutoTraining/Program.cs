@@ -6,6 +6,7 @@ using D;
 using CSharpAutoTraining.Curs3;
 using CSharpAutoTraining.Curs4;
 using CSharpAutoTraining.Curs5;
+using CSharpAutoTraining.Curs6;
 
 namespace Curs1
 {
@@ -13,6 +14,18 @@ namespace Curs1
     {
         static void Main(String[] args)
         {
+            //Testare exercitii de la cursul 6
+            Console.WriteLine("Testare exercitii la cursul 6:");
+            FirefoxCurs6 object1 = new FirefoxCurs6();
+            FirefoxCurs6 object2 = new FirefoxCurs6(1920);
+            FirefoxCurs6 object3 = new FirefoxCurs6(1280.34);
+            var WindowWidth1 = object1.GetWindowWidth();
+            var WindowWidth2 = object2.GetWindowWidth();
+            var WindowWidth3 = object3.GetWindowWidth();
+            Console.WriteLine("For the first constructor window width is:" + WindowWidth1);
+            Console.WriteLine("For second constructor window width is:" + WindowWidth2);
+            Console.WriteLine("For third constructor window width is:" + WindowWidth3);
+            /**
             //testare exercitii de la cursul 5
             Console.WriteLine("Exercitii cursul 5");
             BrowserCurs5 browserCurs5 = new BrowserCurs5();
@@ -34,7 +47,7 @@ namespace Curs1
             SkypeCurs4 skype = new SkypeCurs4();
             skype.About();
             skype.Ping();
-            /**
+            
             // testare exercitii de la cursul 2
             Console.WriteLine("Exercitii cursul 2");
             Browser browser = new Browser();
