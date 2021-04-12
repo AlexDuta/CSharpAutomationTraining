@@ -16,7 +16,7 @@ namespace CSharpAutoTraining.Curs4
             {
                 if (value <= 1024 && value >= 1920)
                 {
-                    Console.WriteLine("You can not set value between 1024 and 1920!");
+                    Console.WriteLine("You can set values between 1024 and 1920!");
                 }
                 else
                 {
@@ -26,6 +26,5 @@ namespace CSharpAutoTraining.Curs4
             }
         }
         public abstract void StartBrowser();
-
     }
 }

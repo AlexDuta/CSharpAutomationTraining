@@ -23,7 +23,6 @@ namespace CSharpAutoTraining.Curs5
                 BrowserHelper.PathImage = "path";
                 Console.WriteLine("Path image is: " + BrowserHelper.PathImage);
             }
-
         }
         public void FindElement()
         {

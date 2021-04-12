@@ -12,7 +12,6 @@ namespace CSharpAutoTraining.Curs4
         {
             Console.WriteLine("Skype is blue");
         }
-
         public void Ping()
         {
             Console.WriteLine("Ping Skype");

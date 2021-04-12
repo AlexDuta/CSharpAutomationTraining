@@ -8,6 +8,6 @@ namespace CSharpAutoTraining.Curs4
 {
     interface INetwork
     {
-
+        void Ping();
     }
 }

@@ -23,12 +23,10 @@ namespace CSharpAutoTraining.Curs5
                 BrowserHelper.PathImage = "path";
                 Console.WriteLine("Path image is: " + BrowserHelper.PathImage);
             }
-
         }
         public void FindElement()
         {
             throw new Exception("The element was not found!");
-
         }
     }
 }

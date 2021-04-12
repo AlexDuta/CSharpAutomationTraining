@@ -12,12 +12,10 @@ namespace CSharpAutoTraining.Curs4
         {
             Console.WriteLine("Firefox is red");
         }
-
         public void Ping()
         {
             Console.WriteLine("Firefox Ping");
         }
-
         public override void StartBrowser()
         {
             Console.WriteLine("Starting Firefox with window width: " + WindowWidth);
