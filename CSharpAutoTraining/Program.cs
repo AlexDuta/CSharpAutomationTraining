@@ -77,7 +77,7 @@ namespace CSharpAutoTraining
 			var firefoxCurs6_2 = new FirefoxCurs6(10);
 			var firefoxCurs6_3 = new FirefoxCurs6(10.3);
 			firefoxCurs6.WindowWidth = 15;
-			Console.WriteLine("Value returned is: " + firefoxCurs6.GetWindowWidth());
+			Console.WriteLine("Returned value is: " + firefoxCurs6.GetWindowWidth());
             Console.ReadKey();
         }
 	}
