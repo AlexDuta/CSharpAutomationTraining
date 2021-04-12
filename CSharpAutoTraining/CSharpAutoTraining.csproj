@@ -60,6 +60,8 @@
     <Compile Include="Curs4\Skype.cs" />
     <Compile Include="Curs5\BroserHelper.cs" />
     <Compile Include="Curs5\BrowserCurs5.cs" />
+    <Compile Include="Curs6\FirefoxCurs6.cs" />
+    <Compile Include="Curs6\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test.cs" />
   </ItemGroup>

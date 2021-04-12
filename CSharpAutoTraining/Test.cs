@@ -5,6 +5,7 @@ using CSharpAutoTraining.Curs1;
 using CSharpAutoTraining.Curs3;
 using CSharpAutoTraining.Curs4;
 using CSharpAutoTraining.Curs5;
+using CSharpAutoTraining.Curs6;
 using D;
 using System;
 using System.Collections.Generic;
@@ -90,12 +91,19 @@ namespace CSharpAutoTraining
 
             //Tema Curs 5
 
-            BrowserCurs5 browser = new BrowserCurs5();
-            browser.SendTextToElement();
+            //BrowserCurs5 browser = new BrowserCurs5();
+            //browser.SendTextToElement();
 
             //pentru cazul cand metoda SendTextToElement este private nu va putea fi apelata aici in main
             //pentru cazul cand metoda SendTextToElement este internal ea va putea fi apelata aici in main
 
+            //Tema Curs 6
+
+            FirefoxCurs6 firefoxCurs6 = new FirefoxCurs6();
+            FirefoxCurs6 ff2 = new FirefoxCurs6(6);
+            FirefoxCurs6 ff3 = new FirefoxCurs6(7.32);
+            firefoxCurs6.WindowWidth = 50;
+            Console.WriteLine(firefoxCurs6.GetWindowWidth());
 
 
             Console.ReadKey();
