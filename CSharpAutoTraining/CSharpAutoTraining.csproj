@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <GenerateProgramFile>false</GenerateProgramFile>
+</PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,7 +63,10 @@
     <Compile Include="Curs5\BrowserHelper.cs" />
     <Compile Include="Curs5\BrowserInternal.cs" />
     <Compile Include="Curs5\PrivateBrowser.cs" />
-    <Compile Include="Curs5\Program.cs" />
+    <Compile Include="Curs5\ProgramCurs5.cs" />
+    <Compile Include="Curs6\Firefox.cs" />
+    <Compile Include="Curs6\HomePage.cs" />
+    <Compile Include="Curs6\ProgramCurs6.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

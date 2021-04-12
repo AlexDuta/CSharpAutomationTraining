@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs5
 {
-    class Program
+    class ProgramCurs5
     {
-        public static void Main()
+        public static void Main2()
         {
             Browser browser = new Browser();
             browser.SendTextToElement();
