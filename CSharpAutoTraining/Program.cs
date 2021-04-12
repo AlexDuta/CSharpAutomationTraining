@@ -7,28 +7,40 @@ using CSharpAutoTraining.A;
 using CSharpAutoTraining.B;
 using CSharpAutoTraining.C;
 using CSharpAutoTraining.Curs4;
+using CSharpAutoTraining.Curs6;
 using CSharpAutoTraining.D;
 
 namespace CSharpAutoTraining
 {
     class Program
     {
+   
         public static void Main(String[] args)
         {
-            //---------------Homework Curs 4---------------------------
 
-            Curs4.Firefox firefox = new Curs4.Firefox();
-            Skype skype = new Skype();
+            Console.WriteLine("---------------Homework Curs 6---------------------------");
 
-            firefox.Ping();
-            firefox.About();
-            firefox.WindowWidth = 1300;
-            firefox.StartBrowser();
-            skype.Ping();
-            skype.About();
+            var fireFoxCurs6 = new FirefoxCurs6();
+            var fireFoxCurs6_2 = new FirefoxCurs6(9);
+            var fireFoxCurs6_3 = new FirefoxCurs6(19.9);
+            fireFoxCurs6.WindowWidth = 20;
+            Console.WriteLine("Valoarea este: " + fireFoxCurs6.GetWindowWidth());
             Console.ReadKey();
 
-            //----------------Homework Curs 3-------------------------
+            Console.WriteLine("---------------Homework Curs 4---------------------------");
+
+            //Curs4.Firefox firefox = new Curs4.Firefox();
+            //Skype skype = new Skype();
+
+            //firefox.Ping();
+            //firefox.About();
+            //firefox.WindowWidth = 1300;
+            //firefox.StartBrowser();
+            //skype.Ping();
+            //skype.About();
+            //Console.ReadKey();
+
+            Console.WriteLine("---------------Homework Curs 3---------------------------"); 
 
             /* Browser browser = new Browser();
              Firefox firefox = new Firefox();
@@ -54,6 +66,4 @@ namespace CSharpAutoTraining
              Console.ReadKey();*/
         }
     }
-
-   
 }

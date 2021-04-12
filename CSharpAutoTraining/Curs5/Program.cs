@@ -8,7 +8,8 @@ namespace CSharpAutoTraining.Curs5
 {
     class Program
     {
-        public static void Main(String[] args) {
+        public static void Main<Curs5>(string[] args)
+        {
             //public access
             Browser browser = new Browser();
             browser.SendTextToElement();
