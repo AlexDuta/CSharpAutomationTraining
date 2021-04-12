@@ -28,7 +28,14 @@ namespace TestClassLibrary
         {
             Assert.AreEqual("Browser is open!", br.GetPageTitle());
         }
-        
+
+        [Test]
+        public void GetPageTitleContains()
+        {
+            string temp = br.GetPageTitle();
+            Assert.IsTrue(temp.Contains("open"));
+        }
+
         //[Test]
         //public void GetPageTitleContains()
         //{
