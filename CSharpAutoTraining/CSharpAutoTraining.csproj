@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CSharpAutoTraining.Curs5.TestCurs5</StartupObject>
+    <StartupObject>CSharpAutoTraining.Curs6.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -70,11 +70,15 @@
     <Compile Include="Curs5\BrowserCurs5_2.cs" />
     <Compile Include="Curs5\BrowserHelp.cs" />
     <Compile Include="Curs5\TestCurs5.cs" />
+    <Compile Include="Curs6\FirefoxCurs6.cs" />
+    <Compile Include="Curs6\HomePage.cs" />
+    <Compile Include="Curs6\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
