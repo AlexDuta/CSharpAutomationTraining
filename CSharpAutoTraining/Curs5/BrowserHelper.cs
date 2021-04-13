@@ -11,7 +11,7 @@ namespace CSharpAutoTraining.Curs5
         public static string PathImage;
         public static void CaptureScreen()
         {
-            Console.WriteLine("Captured Screen");
+            Console.WriteLine("Screen Captured");
         }
     }
 }

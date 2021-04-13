@@ -9,9 +9,9 @@ namespace ConsoleApp1.Curs3_B
 {
     class ChromeCurs3_3 : BrowserCurs3_1
     {
-        public void ChangeWindowWidth(String val)
+        public void ChangeWindowWidth(String value)
         {
-            Console.WriteLine("New WindowWidth is: " + val);
+            Console.WriteLine("New WindowWidth is: " + value);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace ConsoleApp1.Curs2_C
         public void DisplayWindowWidth()
         {
             int windowWidth = 1920;
-            if (windowWidth <= 1920)
+            if (windowWidth < 1920)
             {
                 Console.WriteLine("Window width less than 1920");
             }

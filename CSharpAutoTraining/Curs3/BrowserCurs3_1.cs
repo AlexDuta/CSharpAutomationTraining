@@ -9,13 +9,13 @@ namespace ConsoleApp1.Curs3_A
     class BrowserCurs3_1
     {
         //variables
-        public int WindowWidth_int;
-        public string WindowWidth_string;
+        public int WindowWidthInt;
+        public string WindowWidthString;
 
-        public virtual void ChangeWindowWidth(int val)
+        public virtual void ChangeWindowWidth(int value)
         {
-            WindowWidth_int = val;
-            Console.WriteLine("The new Window width is: " + WindowWidth_int);
+            WindowWidthInt = value;
+            Console.WriteLine("The new Window width is: " + WindowWidthInt);
         }
         public virtual void About()
         {

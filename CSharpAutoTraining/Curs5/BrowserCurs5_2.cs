@@ -14,7 +14,7 @@ namespace CSharpAutoTraining.Curs5
             {
                 FindElement();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 BrowserHelper.CaptureScreen();
             }

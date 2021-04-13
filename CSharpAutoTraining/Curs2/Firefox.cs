@@ -10,7 +10,7 @@ namespace ConsoleApp1.Curs2_B
     {
         //variable
         public int intFireFox = 32;
-        public String stringFireFox = "10076,8765,76.765";
+        public String stringFireFox = "100765,8765,76.765";
         public double doubleFireFox = 23.345;
 
         public void DisplayConvert()

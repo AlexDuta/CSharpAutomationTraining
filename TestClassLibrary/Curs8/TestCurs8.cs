@@ -60,11 +60,12 @@ namespace TestClassLibrary.Curs8
             IWebDriver driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Drivers");
             driver.Url = @"C:\Users\cnegrea\OneDrive - ENDAVA\Desktop\pages\homepage.html";
             driver.Manage().Window.Maximize();
-            var linksOnThePage = driver.FindElements(By.XPath("//a[contains(@href,'html') or contains(@href,'#')]"));
+            var linksOnThePage = driver.FindElements(By.XPath("//a"));
             foreach (var links in linksOnThePage)
             {
                 Assert.IsTrue(links.Displayed);
             }
+            driver.Close();
         }
     }
 }
