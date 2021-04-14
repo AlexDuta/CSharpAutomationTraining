@@ -99,6 +99,12 @@ namespace TestClassLibrary.Curs9
             // actions.SendKeys(Keys.F5).Perform();
             driver.Navigate().Refresh();
 
+            var noEmailErrorText = driver.FindElement(By.XPath("//*[@id='emailErrorText']"));
+            var noPasswordErrorText = driver.FindElement(By.XPath("//*[@id='passwordErrorText']"));
+
+            Assert.IsEmpty(noEmailErrorText.Text);
+            Assert.IsEmpty(noPasswordErrorText.Text);
+
             Thread.Sleep(3000);
         }        
     }
