@@ -58,6 +58,7 @@
     <Compile Include="Curs 8\TestCurs8_1.cs" />
     <Compile Include="Curs7\Browser.cs" />
     <Compile Include="Curs7\Test.cs" />
+    <Compile Include="Curs9\TestCurs9_1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
