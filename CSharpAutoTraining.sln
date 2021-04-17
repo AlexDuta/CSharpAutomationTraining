@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAutoTraining", "CShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClassLibrary", "TestClassLibrary\TestClassLibrary.csproj", "{4C1ED0AB-E77E-4376-8D44-301A3471E58A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{0D3E5283-A676-4AEB-8427-71E655FC91EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4C1ED0AB-E77E-4376-8D44-301A3471E58A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C1ED0AB-E77E-4376-8D44-301A3471E58A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C1ED0AB-E77E-4376-8D44-301A3471E58A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3E5283-A676-4AEB-8427-71E655FC91EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3E5283-A676-4AEB-8427-71E655FC91EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3E5283-A676-4AEB-8427-71E655FC91EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3E5283-A676-4AEB-8427-71E655FC91EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
