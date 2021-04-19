@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Curs10\TestCurs10.cs" />
+    <Compile Include="Curs10\WikiPage.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Curs7\Browser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
