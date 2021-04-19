@@ -15,12 +15,16 @@ namespace TestClassLibrary.Curs10
     public class TestCurs10 : TestBase
     {
         BrowserCurs10 br = new BrowserCurs10();
-        private IWebElement wikiText { get { return driver.FindElement(By.Id("htmlVersion")); } }
+        private IWebElement wikiTextArea { get { return driver.FindElement(By.Id("htmlVersion")); } }
+        private IWebElement wikiButton { get { return driver.FindElement(By.XPath("//*[@id='navHeader']/a[2]")); } }
+        private IWebElement wikiH1Text { get { return driver.FindElement(By.TagName("h1")); } }
+        private IWebElement wikiHtmlVersions { get { return driver.FindElement(By.Id("htmlversions")); } }
+
+
         [Test]
         public void navigateToWikiExplicitWait()
         {
-            driver.FindElement(By.XPath("//*[@id='navHeader']/a[2]")).Click();
-            var wikiTextArea = driver.FindElement(By.Id("htmlVersion"));
+            wikiButton.Click();
             br.explicitWait(driver, By.Id("htmlVersion"), 5);
             wikiTextArea.SendKeys("Text de test with explicit. ");
         }
@@ -28,8 +32,7 @@ namespace TestClassLibrary.Curs10
         [Test]
         public void navigateToWikiImplicitWait()
         {
-            driver.FindElement(By.XPath("//*[@id='navHeader']/a[2]")).Click();
-            var wikiTextArea = driver.FindElement(By.Id("htmlVersion"));
+            wikiButton.Click();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             wikiTextArea.SendKeys("Text de test with implicit.");
         }
@@ -38,8 +41,7 @@ namespace TestClassLibrary.Curs10
         [Test]
         public void navigateToWikiFluentWait()
         {
-            driver.FindElement(By.XPath("//*[@id='navHeader']/a[2]")).Click();
-            var wikiTextArea = driver.FindElement(By.Id("htmlVersion"));
+            wikiButton.Click();
             br.fluentWait(driver, By.Id("htmlVersion"));
             wikiTextArea.SendKeys("Text de test with fluent.");
         }
@@ -47,8 +49,7 @@ namespace TestClassLibrary.Curs10
         [Test]
         public void checkWikiPageH1Text()
         {
-            driver.FindElement(By.XPath("//*[@id='navHeader']/a[2]")).Click();
-            var wikiH1Text = driver.FindElement(By.TagName("h1"));
+            wikiButton.Click();
             Assert.IsTrue(wikiH1Text.Displayed);
             Assert.IsTrue(wikiH1Text.Text.Equals("WikiPage"));
         }
@@ -56,28 +57,28 @@ namespace TestClassLibrary.Curs10
         [Test]
         public void checkHtmlVersionValues()
         {
-            driver.FindElement(By.XPath("//*[@id='navHeader']/a[2]")).Click();
-            var dropDown = driver.FindElement(By.Id("htmlversions"));
+            wikiButton.Click();
             br.explicitWait(driver, By.Id("htmlversions"), 5);
-            SelectElement selectElement = new SelectElement(dropDown);
+            SelectElement selectElement = new SelectElement(wikiHtmlVersions);
             
             selectElement.SelectByValue("2");
-            Assert.IsTrue(wikiText.Text.Equals("Current selection: 2"));
+            Assert.IsTrue(wikiTextArea.Text.Equals("Current selection: 2"));
             
             selectElement.SelectByValue("3.2");
-            Assert.IsTrue(wikiText.Text.Equals("Current selection: 3.2"));
+            Assert.IsTrue(wikiTextArea.Text.Equals("Current selection: 3.2"));
 
             selectElement.SelectByValue("4.0");
-            Assert.IsTrue(wikiText.Text.Equals("Current selection: 4.0"));
+            Assert.IsTrue(wikiTextArea.Text.Equals("Current selection: 4.0"));
 
             selectElement.SelectByValue("5");
-            Assert.IsTrue(wikiText.Text.Equals("Current selection: 5"));
+            Assert.IsTrue(wikiTextArea.Text.Equals("Current selection: 5"));
         }
 
         [Test]
         public void checkHeaderLinks()
         {
-            driver.FindElement(By.XPath("//*[@id='navHeader']/a[2]")).Click();
+            wikiButton.Click();
+
             var header = driver.FindElement(By.Id("navHeader"));
             var links = header.FindElements(By.TagName("a"));
 
@@ -90,7 +91,8 @@ namespace TestClassLibrary.Curs10
         [Test]
         public void checkFooterLinks()
         {
-            driver.FindElement(By.XPath("//*[@id='navHeader']/a[2]")).Click();
+            wikiButton.Click(); 
+
             var header = driver.FindElement(By.Id("nav"));
             var links = header.FindElements(By.TagName("a"));
 
