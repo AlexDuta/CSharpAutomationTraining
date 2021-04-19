@@ -14,24 +14,8 @@ using TestClassLibrary.Curs7;
 namespace TestClassLibrary
 {
     [TestFixture]
-    public class Test
+    public class Test : TestBase
     {
-        public IWebDriver driver;
-
-        [SetUp]
-        public void Setup()
-        {
-            driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Driver");
-            driver.Url = @"C:\Users\rbobletec\Downloads\pages\homepage.html";
-            driver.Manage().Window.Maximize();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            driver.Quit();
-        }
-
         Browser br = new Browser();
         [Test]
         public void TestBrowserTrue()

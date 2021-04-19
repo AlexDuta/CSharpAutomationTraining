@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAutoTraining", "CShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClassLibrary", "TestClassLibrary\TestClassLibrary.csproj", "{54C2BD3B-942C-4F93-ADEB-64FEFC2189AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{2BA215AD-D55E-4140-A000-DC8AA8D4CF8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{54C2BD3B-942C-4F93-ADEB-64FEFC2189AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C2BD3B-942C-4F93-ADEB-64FEFC2189AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54C2BD3B-942C-4F93-ADEB-64FEFC2189AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA215AD-D55E-4140-A000-DC8AA8D4CF8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA215AD-D55E-4140-A000-DC8AA8D4CF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA215AD-D55E-4140-A000-DC8AA8D4CF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA215AD-D55E-4140-A000-DC8AA8D4CF8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
