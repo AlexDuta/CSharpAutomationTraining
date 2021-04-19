@@ -55,6 +55,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Curs10\HomePage.cs" />
+    <Compile Include="Curs10\TestBase.cs" />
+    <Compile Include="Curs10\TestCurs10.cs" />
+    <Compile Include="Curs10\WikiPage.cs" />
     <Compile Include="Curs7\BrowserCurs7.cs" />
     <Compile Include="Curs7\TestCurs7.cs" />
     <Compile Include="Curs8\TestCurs8.cs" />
@@ -69,7 +73,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{0ecb83a9-6365-4b6e-995a-c8c1328f3e79}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
