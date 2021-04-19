@@ -14,10 +14,11 @@ namespace TestClassLibrary.Curs10
     {
         private IWebDriver driver;
         private Browser browser;
-      
+
 
         //elemente
-        private IWebElement textArea { get { return driver.FindElement(By.Id("htmlVersion")); } }
+        private By textAreaBy = By.Id("htmlVersion");
+        private IWebElement textArea { get { return driver.FindElement(textAreaBy); } }
         private IWebElement PageHeader { get { return driver.FindElement(By.TagName("h1")); } }
 
         private By selectDropDownBy = By.Id("htmlversions");
@@ -77,6 +78,30 @@ namespace TestClassLibrary.Curs10
             Assert.IsTrue(footerHomePage.Displayed);
             Assert.IsTrue(footerWikiPage.Displayed);
             Assert.IsTrue(footerContactPage.Displayed);
+            return this;
+        }
+
+        public WikiPage waitPageToLoadExplicit()
+        {
+            browser.ExplicitWaitForElementToBeVisible(driver, textAreaBy, 10);
+            return this;
+        }
+
+        public WikiPage waitPageToLoadFluent()
+        {
+            browser.FluentWaitForElement(driver, textAreaBy);
+            return this;
+        }
+
+        public WikiPage waitPageToLoadImplicit()
+        {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            return this;
+        }
+
+        public WikiPage fillArea(string input)
+        {
+            textArea.SendKeys(input);
             return this;
         }
     }

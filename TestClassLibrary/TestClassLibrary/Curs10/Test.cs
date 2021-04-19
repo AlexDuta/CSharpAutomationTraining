@@ -19,28 +19,22 @@ namespace TestClassLibrary.Curs10
         public void navigateToWikiPageAndFillTextAreExplicit()
         {
             Homepage homepage = new Homepage(driver);
-            homepage.NavigateToWikiPage();
-            br.ExplicitWaitForElementToBeVisible(driver, By.Id("htmlVersion"), 10);
-            driver.FindElement(By.Id("htmlVersion")).SendKeys("test wiki");
-            br.ExplicitWaitForElementToBeVisible(driver, By.Id("htmlVersion"), 5);
+            homepage.NavigateToWikiPage().waitPageToLoadExplicit().fillArea("test wiki");
         }
 
         [Test]
         public void navigateToWikiPageAndFillTextAreaFluent()
         {
             Homepage homepage = new Homepage(driver);
-            homepage.NavigateToWikiPage();
-            br.FluentWaitForElement(driver, By.Id("htmlVersion"));
-            driver.FindElement(By.Id("htmlVersion")).SendKeys("test wiki");
+            homepage.NavigateToWikiPage().waitPageToLoadFluent().fillArea("test wiki");
+           
         }
 
         [Test]
         public void navigateToWikiPageAndFillTextAreaImplicit()
         {
             Homepage homepage = new Homepage(driver);
-            homepage.NavigateToWikiPage();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(7); ;
-            driver.FindElement(By.Id("htmlVersion")).SendKeys("test wiki");
+            homepage.NavigateToWikiPage().waitPageToLoadImplicit().fillArea("test wiki");
         
         }
 
