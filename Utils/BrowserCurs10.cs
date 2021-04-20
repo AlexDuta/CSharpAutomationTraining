@@ -23,7 +23,7 @@ namespace Utils
             fluentWait.PollingInterval = TimeSpan.FromMilliseconds(250);
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
             fluentWait.Message = "Element to be searched not found";
-            IWebElement searchResult = fluentWait.Until(x => x.FindElement(element));
+            fluentWait.Until(x => x.FindElement(element).Displayed);
         }
 
         public void ExplicitWaitForElementToBeDisplayed(IWebDriver driver, By element, int timeOut)

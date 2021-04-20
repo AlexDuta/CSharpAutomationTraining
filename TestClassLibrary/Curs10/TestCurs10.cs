@@ -5,14 +5,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utils;
 
 namespace TestClassLibrary.Curs10
 {
     [TestFixture]
     class TestCurs10: TestBase
     {
-        public IWebDriver driver;
-        public HomePage homePage;
+        // public IWebDriver driver;
+        HomePage homePage;
+        BrowserCurs10 browser;
 
         [Test]
         public void FillTextIntoTextAreaExplicitWait()
@@ -34,6 +36,22 @@ namespace TestClassLibrary.Curs10
             homePage = new HomePage(driver);
             homePage.NavigateToWikiPage().WaitToLoadImplicit().FillTextAreaField("test wiki");
   
+        }
+
+        [Test]
+        public void H1WikiPageIsDisplayed()
+        {
+            homePage = new HomePage(driver);
+            homePage.NavigateToWikiPage().WikiPageH1IsDisplayed();
+        }
+
+        [Test]
+        public void WikiPageDropDownListVersions()
+        {
+            homePage = new HomePage(driver);
+            browser = new BrowserCurs10(driver);
+            homePage.NavigateToWikiPage().HtmlVersionDropDownList();
+            browser.ExplicitWaitForElementToBeDisplayed(driver, By.Id("htmlversions"), 5);
         }
 
     }
