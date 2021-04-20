@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{351C983C-DEB1-4B80-B7CF-579D38D69E68}</ProjectGuid>
+    <ProjectGuid>{51F66A47-04D9-465E-A8DE-DE66453358FA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestClassLibrary</RootNamespace>
-    <AssemblyName>TestClassLibrary</AssemblyName>
+    <RootNamespace>Utils</RootNamespace>
+    <AssemblyName>Utils</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -58,33 +58,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Curs10\HomePage.cs" />
-    <Compile Include="Curs10\Test.cs" />
-    <Compile Include="Curs10\TestBase.cs" />
-    <Compile Include="Curs10\WikiPage.cs" />
-    <Compile Include="Curs8\TestCurs8.cs" />
-    <Compile Include="Curs9\TestCurs9.cs" />
-    <Compile Include="Test.cs" />
-    <Compile Include="Curs7\BrowserCurs7.cs" />
+    <Compile Include="Browser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpAutoTraining\CSharpAutoTraining.csproj">
       <Project>{e83f1479-7c6a-41ea-b56f-05d559e1f475}</Project>
       <Name>CSharpAutoTraining</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Utils\Utils.csproj">
-      <Project>{51f66a47-04d9-465e-a8de-de66453358fa}</Project>
-      <Name>Utils</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Drivers\chromedriver.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
