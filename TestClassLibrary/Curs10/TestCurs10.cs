@@ -54,5 +54,12 @@ namespace TestClassLibrary.Curs10
             browser.ExplicitWaitForElementToBeDisplayed(driver, By.Id("htmlversions"), 5);
         }
 
+        [Test]
+        public void HeaderAndFooterDisplayedLinkSTest()
+        {
+            homePage = new HomePage(driver);
+            homePage.NavigateToWikiPage().CheckHeaderAndFooterLinks();
+        }
+
     }
 }

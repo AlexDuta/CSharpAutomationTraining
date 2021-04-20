@@ -29,6 +29,9 @@ namespace TestClassLibrary.Curs10
         private IWebElement HtmlVersion3 { get { return driver.FindElement(By.XPath("//*[@id='htmlversions']/option[3]")); } }
         private IWebElement HtmlVersion4 { get { return driver.FindElement(By.XPath("//*[@id='htmlversions']/option[4]")); } }
         private IWebElement HtmlVersion5 { get { return driver.FindElement(By.XPath("//*[@id='htmlversions']/option[5]")); } }
+        private IWebElement Header {  get { return driver.FindElement(By.Id("navHeader")); } }
+        private IWebElement Footer {  get { return driver.FindElement(By.Id("nav")); } }
+        
 
         public WikiPage(IWebDriver driver)
         {
@@ -75,13 +78,30 @@ namespace TestClassLibrary.Curs10
             Console.WriteLine(HtmlVersion1.Text);
             Assert.IsTrue(HtmlVersion1.Text.Equals("Please select"));
             selectElement.SelectByValue("2");
-            //Assert.IsTrue(HtmlVersion2.Text.Equals("HTML 2.0"));
+            Assert.IsTrue(HtmlVersion2.Text.Equals("HTML 2.0"));
             selectElement.SelectByValue("3.2");
-            //Assert.IsTrue(HtmlVersion3.Text.Equals("HTML 3.2"));
+            Assert.IsTrue(HtmlVersion3.Text.Equals("HTML 3.2"));
             selectElement.SelectByValue("4.0");
-            //Assert.IsTrue(HtmlVersion4.Text.Equals("HTML 4.0"));
+            Assert.IsTrue(HtmlVersion4.Text.Equals("HTML 4.0"));
             selectElement.SelectByValue("5");
-            //Assert.IsTrue(HtmlVersion5.Text.Equals("HTML 5"));
+            Assert.IsTrue(HtmlVersion5.Text.Equals("HTML 5"));
+            return this;
+        }
+
+        public WikiPage CheckHeaderAndFooterLinks()
+        {
+            var linksHeader = Header.FindElements(By.XPath(".//*[contains(@href, 'html')]"));
+            var linksFooter = Footer.FindElements(By.XPath(".//*[contains(@href, 'html') or contains(@href,'#')]"));
+            foreach (var element in linksHeader)
+            {
+                Assert.IsTrue(element.Displayed);
+                Console.WriteLine(element.Text + element.GetAttribute("html"));
+            }
+            foreach (var element in linksFooter)
+            {
+                Assert.IsTrue(element.Displayed);
+                Console.WriteLine(element.Text + element.GetAttribute("html"));
+            }
             return this;
         }
     }
