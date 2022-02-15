@@ -10,12 +10,12 @@ namespace Curs1
             // simple Hello World program in C#
             Console.WriteLine("Hello world");
 
-            var browser = new Browser(4000);
+            var browser = new Browser(4000,3000);
 
-            Console.WriteLine(browser.WindowWidth);
-            browser.ChangeWindowWidth(3000);
-            Console.WriteLine(browser.WindowWidth);
-
+            browser.DisplayResolution();
+            browser.ChangeWindowWidth(1920);
+            browser.ChangeWindowHeight(1080);
+            browser.DisplayResolution();
             Console.ReadLine();
 
         }
