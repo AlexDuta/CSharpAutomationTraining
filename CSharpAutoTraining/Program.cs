@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpAutoTraining.Course1;
+using System;
 
 namespace Curs1
 {
@@ -8,7 +9,16 @@ namespace Curs1
         {
             // simple Hello World program in C#
             Console.WriteLine("Hello world");
-            Console.ReadKey();
+
+            Browser browser = new Browser(4000);
+
+            Console.WriteLine(browser.windowWidth);
+            browser.ChangeWindowWidth(3000);
+            Console.WriteLine(browser.windowWidth);
+
+
+
+            Console.ReadLine();
         }
     }
 }
