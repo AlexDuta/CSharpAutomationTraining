@@ -9,21 +9,54 @@ namespace CSharpAutoTraining.Course1
     public class Browser
     {
         // Variable
-        public int WindowWidth = 1024;
+        public int WindowWidth;
+        public int WindowHeight;
 
         // Default Constructor
-        public Browser() { }
+        public Browser() { } 
 
-        // Constructor with Parameters
-        public Browser(int newWindowWidth)
+        // Constructor with parameters
+        public Browser(int newWindowWidth, int newWindowLength)
+        {
+            WindowWidth = newWindowWidth;
+            WindowHeight = newWindowLength;
+        }
+
+        // Method to change window width
+        public void ChangeWindowWidth(int newWindowWidth)
         {
             WindowWidth = newWindowWidth;
         }
 
-        // Method
-        public void ChangeWindowWidth(int newWindowWidth)
+        // Method to change window height
+        public void ChangeWindowHeight(int newWindowHeight)
+        {
+            WindowHeight = newWindowHeight;
+        }
+
+        // Method to change window width and height
+        public void ChangeWindowWidthHeight(int newWindowWidth, int newWindowHeight)
         {
             WindowWidth = newWindowWidth;
+            WindowHeight = newWindowHeight;
+        }
+
+        // Method to display window width
+        public int DisplayWindowWidth()
+        {
+            return WindowWidth;
+        }
+
+        // Method to display window height
+        public int DisplayWindowHeight()
+        {
+            return WindowHeight;
+        }
+
+        // Method to display window width and height
+        public void DisplayWindowWidthHeight()
+        {
+            Console.WriteLine(WindowWidth + "," + WindowHeight);
         }
     }
 }
