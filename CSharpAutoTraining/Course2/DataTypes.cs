@@ -80,7 +80,7 @@ namespace CSharpAutoTraining.Course2
             Console.WriteLine("/= " + x);
         }
 
-        // If
+        // If function
         public void IfStatement(int x, int y)
         {
             int value = x / y;
@@ -90,7 +90,7 @@ namespace CSharpAutoTraining.Course2
             }
         }
 
-        // If-Else
+        // If-Else function
         public void IfElseStatement(int x, int y)
         {
             int value = x / y;
@@ -108,7 +108,7 @@ namespace CSharpAutoTraining.Course2
             }
         }
 
-        // Switch-Case
+        // Switch-Case function
         public void SwitchCase(int x)
         {
             switch (x)
@@ -138,7 +138,7 @@ namespace CSharpAutoTraining.Course2
             }
         }
 
-        // While
+        // While function
         public void WhileLoop(int i)
         {
             i = 0;
@@ -150,7 +150,7 @@ namespace CSharpAutoTraining.Course2
             Console.WriteLine();
         }
 
-        // For 
+        // For function
         public void ForLoop(int x)
         {
             for(int i=0; i<x; i++)
@@ -160,7 +160,7 @@ namespace CSharpAutoTraining.Course2
             Console.WriteLine();
         }
 
-        // Do-While 
+        // Do-While function
         public void DoWhileLoop(int x)
         {
             int i = 0;
