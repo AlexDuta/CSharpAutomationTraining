@@ -1,25 +1,32 @@
 ﻿using CSharpAutoTraining.Course1;
 using System;
 
-namespace Curs1
+namespace Course1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Simple Hello World program in C#
-            Console.WriteLine("Hello Part Time Guys!");
+            /* COURSE 1 */
 
-            // Create Browser object
-            Browser browser = new Browser(4000);
+            // Hello World program
+            Console.WriteLine("Hello World!");
+            Console.WriteLine();
+            
+            // Browser
+            Console.WriteLine("BROWSER CLASS");
+            Browser browser = new Browser(1024,2048);
+            Console.Write("Resolution before change: ");
+            browser.DisplayWindowWidthHeight();
+            browser.ChangeWindowWidth(1920);
+            browser.ChangeWindowHeight(1080);
+            Console.Write("Resolution after change: ");
+            browser.DisplayWindowWidthHeight();
+            Console.WriteLine();
 
-            // Show unmodified WindowWidth in Console
-            Console.WriteLine(browser.WindowWidth);
 
-            // Show modified WindowWidth in Console
-            browser.ChangeWindowWidth(3000);
-            Console.WriteLine(browser.WindowWidth);
-            Console.ReadLine(); 
+            Console.ReadLine();
+            
         }
     }
 }
