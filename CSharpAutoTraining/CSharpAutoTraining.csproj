@@ -52,6 +52,11 @@
     <Compile Include="Course3\Browser.cs" />
     <Compile Include="Course3\Firefox.cs" />
     <Compile Include="Course3\InternetExplorer.cs" />
+    <Compile Include="Course3_Tema\Browser.cs" />
+    <Compile Include="Course3_Tema\Chrome.cs" />
+    <Compile Include="Course3_Tema\Edge.cs" />
+    <Compile Include="Course3_Tema\Firefox.cs" />
+    <Compile Include="Course3_Tema\InternetExplorer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

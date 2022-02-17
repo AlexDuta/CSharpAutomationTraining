@@ -1,6 +1,7 @@
 ﻿//using CSharpAutoTraining.Course1;
 //using CSharpAutoTraining.Course3;
-using CSharpAutoTraining.Course2_Tema;
+//using CSharpAutoTraining.Course2_Tema;
+using CSharpAutoTraining.Course3_Tema;
 using System;
 
 namespace Curs1
@@ -9,7 +10,28 @@ namespace Curs1
     {
         static void Main(string[] args)
         {
-            //TEMA 2
+            /////////////////////// TEMA 3 ////////////////////////
+            Edge edge = new Edge();
+            Firefox firefox= new Firefox();
+            Chrome chrome = new Chrome();
+            InternetExplorer internetExplorer = new InternetExplorer();
+
+            Console.WriteLine("Pt Firefox");
+            firefox.SetProfile("Rebeca");
+
+            Console.WriteLine("Pt Chrome");
+            chrome.ChangeWindowWidth("200");
+
+            Console.WriteLine("Pt Internet Explorer");
+            internetExplorer.ChangeWindowWidth(300);
+
+            Console.WriteLine("Pt Edge");
+            edge.ChangeWindowWidth(345);
+            edge.NewFeatureFunction();
+
+
+            /*
+            //////////////////////////////////   TEMA 2 //////////////////////////////
             Browser browser = new Browser();
             Firefox firefox= new Firefox();
             Chrome chrome =  new Chrome();
@@ -34,7 +56,7 @@ namespace Curs1
 
             
 
-            /*
+            
             // simple Hello World program in C#
             Console.WriteLine("Hello world");
            
@@ -146,7 +168,7 @@ namespace Curs1
 
            
             */
- Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
