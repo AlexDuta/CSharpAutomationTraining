@@ -6,9 +6,9 @@ using D;
 
 namespace Curs1
 {
-    class Test
+    class TestCurs2_1
     {
-        static void Main(string[] args)
+        static void MainCurs2(string[] args)
         {
             // simple Hello World program in C#
             /*Console.WriteLine("Hello world");
