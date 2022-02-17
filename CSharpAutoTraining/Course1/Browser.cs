@@ -15,6 +15,18 @@ namespace CSharpAutoTraining.Course1
         // Default Constructor
         public Browser() { } 
 
+        // Constructor with width parameter
+        public Browser(int newWindowWidth)
+        {
+            WindowWidth = newWindowWidth;
+        }
+
+        // Constructor with height parameter
+        public Browser(int newWindowHeight)
+        {
+            WindowHeight = newWindowHeight;
+        }
+
         // Constructor with parameters
         public Browser(int newWindowWidth, int newWindowLength)
         {
@@ -56,7 +68,7 @@ namespace CSharpAutoTraining.Course1
         // Method to display window width and height
         public void DisplayWindowWidthHeight()
         {
-            Console.WriteLine(WindowWidth + "," + WindowHeight);
+            Console.WriteLine(WindowWidth + " X " + WindowHeight);
         }
     }
 }
