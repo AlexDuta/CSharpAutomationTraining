@@ -21,17 +21,11 @@ namespace CSharpAutoTraining.Course1
             WindowWidth = newWindowWidth;
         }
 
-        // Constructor with height parameter
-        public Browser(int newWindowHeight)
-        {
-            WindowHeight = newWindowHeight;
-        }
-
         // Constructor with parameters
-        public Browser(int newWindowWidth, int newWindowLength)
+        public Browser(int newWindowWidth, int newWindowHeight)
         {
             WindowWidth = newWindowWidth;
-            WindowHeight = newWindowLength;
+            WindowHeight = newWindowHeight;
         }
 
         // Method to change window width
