@@ -12,7 +12,7 @@ namespace CSharpAutoTraining.Curs2
         public string WindowWidth_string;
         public double WindowWidth_double;
 
-        public void displayWindowWidth(int WindowWidth_int)
+        public void DisplayWindowWidth(int WindowWidth_int)
         {
             if(WindowWidth_int > 1920)
             {
