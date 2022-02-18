@@ -1,5 +1,6 @@
 ﻿using CSharpAutoTraining.Course1;
 using CSharpAutoTraining.Course2;
+using CSharpAutoTraining.Course2_HW;
 using System;
 
 namespace Course1
@@ -8,15 +9,16 @@ namespace Course1
     {
         static void Main(string[] args)
         {
-            /* COURSE 1 
 
+            /* -----------------COURSE 1-----------------
+            
             // Hello World program
             Console.WriteLine("Hello World!");
             Console.WriteLine();
-            
+
             // Browser
             Console.WriteLine("BROWSER CLASS");
-            Browser browser = new Browser(1024,2048);
+            Browser browser = new Browser(1024, 2048);
             Console.Write("Resolution before change: ");
             browser.DisplayWindowWidthHeight();
             browser.ChangeWindowWidth(1920);
@@ -28,7 +30,7 @@ namespace Course1
             */
 
 
-            /* COURSE 2 */
+            /* -----------------COURSE 2-----------------  
 
             // Data Types
             Console.WriteLine("DATA TYPES");
@@ -86,8 +88,54 @@ namespace Course1
             ds.DoWhileLoop(10);
             Console.WriteLine();
 
+            */
+
+
+            //-----------------COURSE 2 HOMEWORK-----------------
+            
+            // Create objects for each class
+            Browsers b = new Browsers();
+            Firefox f = new Firefox();
+            Chrome c = new Chrome();
+            InternetExplorer ie = new InternetExplorer();
+
+            // Set values for variables for Firefox object
+            f.SetWindowWidth_int(2048);                  // Set int value
+            f.SetWindowWidth_string("1920");             // Set string value
+            f.SetWindowWidth_double(1080.0);              // Set double value
+
+            // Conversions of Firefox object values
+            Console.WriteLine("FIREFOX\n");
+            Console.WriteLine("CONVERSIONS");
+            Console.WriteLine("Int-String: " + Convert.ToString(f.WindowWidth_int));
+            Console.WriteLine("String-Double: " + Convert.ToDouble(f.WindowWidth_string));
+            Console.WriteLine("Double-Int: " + Convert.ToString(f.WindowWidth_double));
+            Console.WriteLine("\n");
+
+            // Show window width of Chrome
+            Console.WriteLine("CHROME\n");
+            c.SetWindowWidth_int(1080);         // Value less than 1920
+            c.DisplayWindowWidth_int();
+            c.SetWindowWidth_int(2048);         // Value larger than 1920
+            c.DisplayWindowWidth_int();
+            Console.WriteLine("\n");
+
+            // Show window width of Internet Explorer
+            Console.WriteLine("INTERNET EXPLORER\n");
+            Console.WriteLine("VALUE < 1920");
+            ie.SetWindowWidth_int(540);         // Value less than 1920
+            ie.DisplayWindowWidth_int();
+            Console.WriteLine();
+            Console.WriteLine("VALUE > 1920");
+            ie.SetWindowWidth_int(2048);        // Value larger than  1920
+            ie.DisplayWindowWidth_int();
+            Console.WriteLine();
+             
+            
+
             Console.ReadLine();
             
         }
     }
+
 }
