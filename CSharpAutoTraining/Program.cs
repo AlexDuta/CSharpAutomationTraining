@@ -1,6 +1,8 @@
-﻿using CSharpAutoTraining.Course1;
-using CSharpAutoTraining.Course2;
-using CSharpAutoTraining.Course2_HW;
+﻿// using CSharpAutoTraining.Course1;
+// using CSharpAutoTraining.Course2;
+// using CSharpAutoTraining.Course2_HW;
+// using CSharpAutoTraining.Course3;
+using CSharpAutoTraining.Course3_HW;
 using System;
 
 namespace Course1
@@ -91,7 +93,7 @@ namespace Course1
             */
 
 
-            //-----------------COURSE 2 HOMEWORK-----------------
+            /*-----------------COURSE 2 HOMEWORK-----------------
             
             // Create objects for each class
             Browsers b = new Browsers();
@@ -130,8 +132,77 @@ namespace Course1
             ie.SetWindowWidth_int(2048);        // Value larger than  1920
             ie.DisplayWindowWidth_int();
             Console.WriteLine();
-             
+
+            */
+
+
+            /*-----------------COURSE 3-----------------
+
+            // Create objects
+            Console.WriteLine("INHERITANCE\n");
+            Browser b = new Browser();
+            Firefox f = new Firefox();
+            InternetExplorer ie = new InternetExplorer();
+
+            // Change width for browsers
+            b.ChangeWindowWidth(2048);
+            f.ChangeWindowWidth(1080);
+            ie.ChangeWindowWidth(1920);
+
+            // Show width for browsers in console
+            Console.WriteLine("SHOW WINDOW WIDTHS");
+            Console.WriteLine("Browser Width: " + b.GetWindowWidth());  
+            Console.WriteLine("Firefox Width: " + f.GetWindowWidth());  
+            Console.WriteLine("Internet Explorer Width: " + ie.GetWindowWidth() +"\n");
+
+            // Change width for Internet Explorer 
+            Console.WriteLine("CHANGE WINDOW WIDTH");
+            ie.ChangeWindowWidth(10);
+            ie.ChangeWindowWidth("Internet Explorer");
+            ie.ChangeWindowWidth(5, "a");
+            ie.ChangeWindowWidth("b", 20);
+            Console.WriteLine();
+
+            */
+
+
+            /*-----------------COURSE 3 HOMEWORK-----------------*/
+
+            // Create objects for each implemented class
+            Firefox f = new Firefox();  
+            Chrome c = new Chrome();
+            InternetExplorer ie = new InternetExplorer();
+            Edge e = new Edge();
+
+            // Testing Firefox class
+            Console.WriteLine("-----FIREFOX CLASS-----");
+            f.About();
+            f.setProfile("Andre");
+            Console.WriteLine("Profile name: " + f.getProfile());
+            f.ChangeWindowWidth(1080);
+            Console.WriteLine();
+
+            // Testing Chrome class
+            Console.WriteLine("-----CHROME CLASS-----");
+            c.About();
+            c.ChangeWindowWidth("1920");
+            c.ChangeWindowWidth(2048);
+            Console.WriteLine();
+
+            // Testing InternetExplorer class
+            Console.WriteLine("-----INTERNETEXPLORER CLASS-----");
+            ie.About();
+            ie.ChangeWindowWidth(480);
+            Console.WriteLine();
+
+            // Testing Edge class
+            Console.WriteLine("-----EDGE CLASS-----");
+            e.About();
+            e.setVersion(12);
+            e.NewFeatureFunction();
+            e.ChangeWindowWidth(1024);
             
+
 
             Console.ReadLine();
             
