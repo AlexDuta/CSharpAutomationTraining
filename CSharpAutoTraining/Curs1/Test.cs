@@ -8,6 +8,7 @@ namespace CSharpAutoTraining.Curs1
 {
     internal class Test
     {
+        /*
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello world");
@@ -21,6 +22,9 @@ namespace CSharpAutoTraining.Curs1
             Console.WriteLine("New width = " + browser.WindowWidth);
             Console.WriteLine("New height = " + browser.WindowHeight);
             Console.ReadKey();
+
+
         }
+        */
     }
 }
