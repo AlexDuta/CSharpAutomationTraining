@@ -45,12 +45,22 @@
   <ItemGroup>
     <Compile Include="Curs1\Browser.cs" />
     <Compile Include="Curs1\Test.cs" />
+    <Compile Include="Curs2\BrowserC2.cs" />
+    <Compile Include="Curs2\ChromeC2.cs" />
+    <Compile Include="Curs2\FirefoxC2.cs" />
+    <Compile Include="Curs2\InternetExplorerC2.cs" />
+    <Compile Include="Curs3\BrowserC3.cs" />
+    <Compile Include="Curs3\ChromeC3.cs" />
+    <Compile Include="Curs3\EdgeC3.cs" />
+    <Compile Include="Curs3\FirefoxC3.cs" />
+    <Compile Include="Curs3\InternetExplorerC3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
