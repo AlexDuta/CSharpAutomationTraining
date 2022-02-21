@@ -8,7 +8,7 @@ namespace CSharpAutoTraining.Course1
 {
     class Test
     {
-        static void Main(string[] args)
+      /*  static void Main(string[] args)
         {
             Browser browser = new Browser();
             
@@ -16,6 +16,6 @@ namespace CSharpAutoTraining.Course1
             browser.ChangeWindowHeight(1080);
 
             browser.printWidthAndHeight();
-        }
+        } */
     }
 }

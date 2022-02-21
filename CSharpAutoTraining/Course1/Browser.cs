@@ -36,5 +36,6 @@ namespace CSharpAutoTraining.Course1
             Console.WriteLine("Window Width: {0}\nWindow Height: {1}", windowWidth, windowHeight);
             Console.ReadLine();
         }
+
     }
 }
