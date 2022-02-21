@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Course3
 {
-    class Firefox : Browser
+    class Edge : InternetExplorer
     {
-        public void SetProfile(string profileName)
+        int version = 101;
+
+        public void NewFeatureFunction()
         {
-            WindowWidth_string = profileName;
-            Console.WriteLine(WindowWidth_string);
+            Console.WriteLine(version);
         }
     }
 }

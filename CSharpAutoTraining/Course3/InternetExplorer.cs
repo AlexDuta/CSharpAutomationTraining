@@ -9,30 +9,36 @@ namespace CSharpAutoTraining.Course3
     class InternetExplorer : Browser
     {
 
-        public void LoginHPQC()
-        {
+        //public void LoginHPQC()
+        //{
 
-        }
+        //}
 
-        public override void ChangeWindowWidth(int newWindowWidth)
-        {
-            windowWidth = newWindowWidth;
-            Console.WriteLine("InternetExplorer");
-        }
+        //public override void ChangeWindowWidth(int newWindowWidth)
+        //{
+        //    windowWidth = newWindowWidth;
+        //    Console.WriteLine("InternetExplorer");
+        //}
 
-        public void ChangeWindowWidth(string newWindowWidth)
-        {
-            Console.WriteLine("InternetExplorer");
-        }
+        //public void ChangeWindowWidth(string newWindowWidth)
+        //{
+        //    Console.WriteLine("InternetExplorer");
+        //}
 
-        public void ChangeWindowWidth(int newWindowWidth, string a)
-        {
-            Console.WriteLine("ABC");
-        }
+        //public void ChangeWindowWidth(int newWindowWidth, string a)
+        //{
+        //    Console.WriteLine("ABC");
+        //}
 
-        public void ChangeWindowWidth(string a, int newWindowWidth)
+        //public void ChangeWindowWidth(string a, int newWindowWidth)
+        //{
+        //    Console.WriteLine("Order");
+        //}
+        
+        public override void ChangeWindowWidth(int val)
         {
-            Console.WriteLine("Order");
+            WindowWidth_int = val;
+            Console.WriteLine(WindowWidth_int);
         }
     }
 }

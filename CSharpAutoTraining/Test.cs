@@ -1,4 +1,4 @@
-﻿using CSharpAutoTraining.Course2;
+﻿using CSharpAutoTraining.Course3;
 using System;
 
 namespace Curs1
@@ -102,28 +102,43 @@ namespace Curs1
 
 
             //Course 2
-            Browser br = new Browser();
+            //Browser br = new Browser();
+            //Firefox fr = new Firefox();
+            //Chrome ch = new Chrome();
+            //InternetExplorer ie = new InternetExplorer();
+
+            //fr.WindowWidth_double = 25.5;
+            //fr.WindowWidth_int = 25;
+            //fr.WindowWidth_string = "25.6";
+
+            //string IntToString = Convert.ToString(fr.WindowWidth_int);
+            //double StringToDouble = Convert.ToDouble(fr.WindowWidth_string);
+            //int DoubleToInt = Convert.ToInt32(fr.WindowWidth_double);
+
+            //Console.WriteLine("IntToString: {0}\nStringToDouble: {1}\nDoubleToInt: {2}", IntToString, StringToDouble, DoubleToInt);
+
+            //ch.WindowWidth_int = 2560;
+            //ch.DisplayWindowWidth();
+            //Console.WriteLine("\n\n");
+
+            //ie.WindowWidth_int = 3900;
+            //ie.Display3Or2();
+            //Console.WriteLine("\n\n");
+
+            //Course 3
+
             Firefox fr = new Firefox();
-            Chrome ch = new Chrome();
+            Chrome chr = new Chrome();
             InternetExplorer ie = new InternetExplorer();
+            Edge ed = new Edge();
 
-            fr.WindowWidth_double = 25.5;
-            fr.WindowWidth_int = 25;
-            fr.WindowWidth_string = "25.6";
+            fr.SetProfile("New Profile");
 
-            string IntToString = Convert.ToString(fr.WindowWidth_int);
-            double StringToDouble = Convert.ToDouble(fr.WindowWidth_string);
-            int DoubleToInt = Convert.ToInt32(fr.WindowWidth_double);
+            chr.ChangeWindowWidth("1720");
 
-            Console.WriteLine("IntToString: {0}\nStringToDouble: {1}\nDoubleToInt: {2}", IntToString, StringToDouble, DoubleToInt);
+            ie.ChangeWindowWidth(2560);
 
-            ch.WindowWidth_int = 2560;
-            ch.DisplayWindowWidth();
-            Console.WriteLine("\n\n");
-
-            ie.WindowWidth_int = 3900;
-            ie.Display3Or2();
-            Console.WriteLine("\n\n");
+            ed.NewFeatureFunction();
 
             Console.ReadLine();
             
