@@ -58,10 +58,15 @@
     <Compile Include="Curs4\IComponent.cs" />
     <Compile Include="Curs4\INetwork.cs" />
     <Compile Include="Curs4\Skype.cs" />
+    <Compile Include="Curs5\BrowserCurs5_3.cs" />
+    <Compile Include="Curs5\BrowserCurs5_2.cs" />
+    <Compile Include="Curs5\BrowserCurs5_1.cs" />
+    <Compile Include="Curs5\BrowserHelper.cs" />
     <Compile Include="TestCurs2_1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCurs3_1.cs" />
     <Compile Include="TestCurs4_1.cs" />
+    <Compile Include="TestCurs5_1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

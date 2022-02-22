@@ -9,7 +9,7 @@ namespace CSharpAutoTraining
 {
     class TestCurs4_1
     {
-        public static void Main(string[] args)
+        public static void MainCurs4(string[] args)
         {
             Firefox firefox = new Firefox() ;
             Skype skype = new Skype();
