@@ -9,7 +9,7 @@ namespace CSharpAutoTraining
 {
     public class TestCurs3_1
     {
-        static void Main(string[] args)
+        static void MainCurs3(string[] args)
         {
             Firefox firefox = new Firefox();
             Chrome chrome = new Chrome();
