@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CSharpAutoTraining.Curs3;
+using CSharpAutoTraining.Curs4;
 
 namespace CSharpAutoTraining
 {
@@ -35,9 +35,11 @@ namespace CSharpAutoTraining
             chrome.DisplayWindowWidth(2100);
 
             internetExplorer.DisplayWindowWidth(1900);
-            internetExplorer.DisplayWindowWidth(2000);*/
+            internetExplorer.DisplayWindowWidth(2000);
 
  
+            --tema 3
+
             Firefox firefox = new Firefox();
             Chrome chrome = new Chrome();
             InternetExplorer internetExplorer = new InternetExplorer();
@@ -56,7 +58,21 @@ namespace CSharpAutoTraining
 
             Console.WriteLine("\nEdge");
             edge.ChangeWindowWidth(1000);
-            edge.NewFeatureFunction();
+            edge.NewFeatureFunction();*/
+
+            //--tema 4
+
+            Firefox firefox = new Firefox();    
+            Skype skype = new Skype();
+            firefox.WindowWidth = 1000;
+            firefox.WindowWidth = 1300;
+            firefox.StartBrowser();
+            firefox.About();
+            firefox.Ping();
+
+            skype.About();
+            skype.Ping();
+
             
 
 
