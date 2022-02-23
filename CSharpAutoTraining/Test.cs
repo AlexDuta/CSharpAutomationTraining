@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CSharpAutoTraining.Curs4;
+using CSharpAutoTraining.Curs5;
 
 namespace CSharpAutoTraining
 {
@@ -58,9 +58,9 @@ namespace CSharpAutoTraining
 
             Console.WriteLine("\nEdge");
             edge.ChangeWindowWidth(1000);
-            edge.NewFeatureFunction();*/
+            edge.NewFeatureFunction();
 
-            //--tema 4
+            --tema 4
 
             Firefox firefox = new Firefox();    
             Skype skype = new Skype();
@@ -71,10 +71,18 @@ namespace CSharpAutoTraining
             firefox.Ping();
 
             skype.About();
-            skype.Ping();
+            skype.Ping();*/
 
-            
+            Browser5_1 browser = new Browser5_1();
+            browser.SendTextToElement();
 
+            Browser5_2 browser2 = new Browser5_2();
+            browser2.SendTextToElement();
+
+            Browser5_3 browser3 = new Browser5_3();
+            //browser3.SendTextToElement();
+
+           
 
             Console.ReadKey();
 
