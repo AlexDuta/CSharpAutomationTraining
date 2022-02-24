@@ -2,7 +2,12 @@
 // using CSharpAutoTraining.Course2;
 // using CSharpAutoTraining.Course2_HW;
 // using CSharpAutoTraining.Course3;
-using CSharpAutoTraining.Course3_HW;
+// using CSharpAutoTraining.Course3_HW;
+// using CSharpAutoTraining.Course4.AbstractClasses;
+// using CSharpAutoTraining.Course4.Interfaces;
+using CSharpAutoTraining.Course4_HW;
+// using CSharpAutoTraining.Course5;
+using CSharpAutoTraining.Course5_HW;
 using System;
 
 namespace Course1
@@ -166,7 +171,7 @@ namespace Course1
             */
 
 
-            /*-----------------COURSE 3 HOMEWORK-----------------*/
+            /*-----------------COURSE 3 HOMEWORK-----------------
 
             // Create objects for each implemented class
             Firefox f = new Firefox();  
@@ -201,8 +206,105 @@ namespace Course1
             e.setVersion(12);
             e.NewFeatureFunction();
             e.ChangeWindowWidth(1024);
-            
 
+            */
+
+
+            /*-----------------COURSE 4-----------------
+
+            // Abstract classes
+            Console.WriteLine("ABSTRACT CLASSES");
+            CSharpAutoTraining.Course4.AbstractClasses.Firefox f1 = new CSharpAutoTraining.Course4.AbstractClasses.Firefox();
+            InternetExplorer ie = new InternetExplorer();
+            f1.About();
+            f1.ChangeWindowWidth(1080);
+            ie.About();
+            ie.ChangeWindowWidth(1920);
+            Console.WriteLine();
+
+            // Interfaces
+            Console.WriteLine("INTERFACES");
+            CSharpAutoTraining.Course4.Interfaces.Firefox f2 = new CSharpAutoTraining.Course4.Interfaces.Firefox();
+            Skype s = new Skype();
+            f2.About();
+            f2.ChangeWindowWidth(2048);
+            s.About();
+            Console.WriteLine();
+
+            // Encapsulation
+            Console.WriteLine("ENCAPSULATION");
+            f1.ChangeWindowWidth(-1080);
+            f2.ChangeWindowWidth(-2048);
+            Console.WriteLine();
+
+            */
+
+
+            /* -----------------COURSE 4 HOMEWORK----------------- */
+
+            // Create instances
+            CSharpAutoTraining.Course4_HW.Firefox f = new CSharpAutoTraining.Course4_HW.Firefox();
+            CSharpAutoTraining.Course4_HW.Skype s = new CSharpAutoTraining.Course4_HW.Skype();
+
+            // Firefox
+            f.About();
+            f.StartBrowser();
+            f.ChangeWindowWidth(0);
+            f.ChangeWindowWidth(1080);
+            f.DisplayWindowWidth();
+            f.Ping();
+            f.StopBrowser();
+            Console.WriteLine();
+
+            // Skype
+            s.About();
+            s.Ping();
+            Console.WriteLine();
+
+
+            /*-----------------COURSE 5-----------------
+
+            // Exception Handling & Throwing Exceptions
+            CSharpAutoTraining.Course5.Math m = new CSharpAutoTraining.Course5.Math();
+            Console.WriteLine("EXCEPTIONS");
+            // m.Divide(2, 0);         // => System.DivideByZeroException (caught)
+            // m.Divide(2, 2);         // Result: 1
+            // m.TestException();      // Throw Exception created by user
+            Console.WriteLine();
+
+            // Access modifiers
+            BrowserB bb = new BrowserB();
+            // bb.MyPrivateMethod() - unaccessible (only nested class)
+            // bb.MyProtectedMethod() - unaccessible (only derived classs)
+            bb.MyProtectedInternalMethod();
+            bb.MyInternalMethod();
+
+            // Static methods and variables
+            CSharpAutoTraining.Course5.Math.Divide(3, 2);
+
+            */
+
+
+            /*-----------------COURSE 5 HOMEWORK-----------------S*/
+
+            // Create instances
+            Browser5_1 b1 = new Browser5_1();
+            Browser5_2 b2 = new Browser5_2();
+            Browser5_3 b3 = new Browser5_3();
+
+            // Call method public SendTextToElement() 
+            Console.WriteLine("BROWSER5_1");
+            b1.SendTextToElement();
+            Console.WriteLine();
+
+            // Call method internal SendTextToElement()
+            Console.WriteLine("BROWSER5_2");
+            b2.SendTextToElement();
+            Console.WriteLine();
+
+            // Call method private SendTextToElement()
+            Console.WriteLine("BROWSER5_3");
+            // b3.SendTextToElement();  - visible only in the containing class!
 
             Console.ReadLine();
             
