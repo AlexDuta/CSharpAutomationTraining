@@ -54,12 +54,18 @@
     <Compile Include="Course3\Edge.cs" />
     <Compile Include="Course3\Firefox.cs" />
     <Compile Include="Course3\InternetExplorer.cs" />
+    <Compile Include="Course4\Browser.cs" />
+    <Compile Include="Course4\Firefox.cs" />
+    <Compile Include="Course4\IComponent.cs" />
+    <Compile Include="Course4\INetwork.cs" />
+    <Compile Include="Course4\Skype.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
