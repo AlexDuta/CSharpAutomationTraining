@@ -59,6 +59,8 @@
     <Compile Include="Course4\IComponent.cs" />
     <Compile Include="Course4\INetwork.cs" />
     <Compile Include="Course4\Skype.cs" />
+    <Compile Include="Course5\Browser.cs" />
+    <Compile Include="Course5\BrowserHelper.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

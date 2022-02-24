@@ -1,4 +1,4 @@
-﻿using CSharpAutoTraining.Course4;
+﻿using CSharpAutoTraining.Course5;
 using System;
 
 namespace Curs1
@@ -144,20 +144,28 @@ namespace Curs1
 
             //Course 4
 
-            Firefox ff = new Firefox();
-            Skype sk = new Skype();
+            //Firefox ff = new Firefox();
+            //Skype sk = new Skype();
 
-            ff.WindoWWidth = 1020;
-            ff.About();
-            ff.Ping();
-            ff.StartBrowser();
+            //ff.WindoWWidth = 1020;
+            //ff.About();
+            //ff.Ping();
+            //ff.StartBrowser();
 
-            sk.WindoWWidth = 1720;
-            sk.About();
-            sk.Ping();
-            sk.StartBrowser();
+            //sk.WindoWWidth = 1720;
+            //sk.About();
+            //sk.Ping();
+            //sk.StartBrowser();
+
+            //Console.ReadLine();
+
+            //Course 5
+
+            Browser br = new Browser();
+            br.SendTextToElement();
 
             Console.ReadLine();
+
         }
     }
 }
