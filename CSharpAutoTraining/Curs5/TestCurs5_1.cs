@@ -9,7 +9,7 @@ namespace CSharpAutoTraining
 {
     class Test
     {
-        public static void Main(string[] args)
+        public static void Main_5(string[] args)
         {
             Browser browser = new Browser();
             Browser_2 browser2 = new Browser_2();

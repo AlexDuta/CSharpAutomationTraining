@@ -62,11 +62,13 @@
     <Compile Include="Curs5\BrowserCurs5_2.cs" />
     <Compile Include="Curs5\BrowserCurs5_1.cs" />
     <Compile Include="Curs5\BrowserHelper.cs" />
-    <Compile Include="TestCurs2_1.cs" />
+    <Compile Include="Curs6\FirefoxCurs6_1.cs" />
+    <Compile Include="Curs2\TestCurs2_1.cs" />
+    <Compile Include="Curs6\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestCurs3_1.cs" />
-    <Compile Include="TestCurs4_1.cs" />
-    <Compile Include="TestCurs5_1.cs" />
+    <Compile Include="Curs3\TestCurs3_1.cs" />
+    <Compile Include="Curs4\TestCurs4_1.cs" />
+    <Compile Include="Curs5\TestCurs5_1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
