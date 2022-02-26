@@ -54,6 +54,15 @@
     <Compile Include="Curs3\EdgeC3.cs" />
     <Compile Include="Curs3\FirefoxC3.cs" />
     <Compile Include="Curs3\InternetExplorerC3.cs" />
+    <Compile Include="Curs4\BrowserC4.cs" />
+    <Compile Include="Curs4\FirefoxC4.cs" />
+    <Compile Include="Curs4\IComponent.cs" />
+    <Compile Include="Curs4\INetwork.cs" />
+    <Compile Include="Curs4\Skype.cs" />
+    <Compile Include="Curs5\BrowserC5a.cs" />
+    <Compile Include="Curs5\BrowserC5.cs" />
+    <Compile Include="Curs5\BrowserC5b.cs" />
+    <Compile Include="Curs5\BrowserHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -2,6 +2,8 @@
 using CSharpAutoTraining.Curs1;
 using CSharpAutoTraining.Curs2;
 using CSharpAutoTraining.Curs3;
+using CSharpAutoTraining.Curs4;
+using CSharpAutoTraining.Curs5;
 
 namespace Curs1
 {
@@ -11,6 +13,10 @@ namespace Curs1
         {
             //Curs1 - Practice
 
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Curs 1");
+            Console.WriteLine("--------------------------------------");
+
             /*Browser browser = new Browser();
             browser.ChangeWindowHeight(1080);
             browser.ChangeWindowWidht(1920);
@@ -18,7 +24,11 @@ namespace Curs1
 
             //Curs2 - Practice
 
-            /*BrowserC2 browserC2 = new BrowserC2();
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Curs 2");
+            Console.WriteLine("--------------------------------------");
+
+            BrowserC2 browserC2 = new BrowserC2();
             ChromeC2 chromeC2 = new ChromeC2();
             FirefoxC2 firefoxC2 = new FirefoxC2();
             InternetExplorerC2 internetExplorerC2 = new InternetExplorerC2();
@@ -40,10 +50,13 @@ namespace Curs1
             internetExplorerC2.WindowWidth_int = 2000;
             internetExplorerC2.displayWindowWidht();
 
-            Console.ReadLine();*/
+
 
             //Curs3 - Practice
 
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Curs 3");
+            Console.WriteLine("--------------------------------------");
             FirefoxC3 firefoxC3 = new FirefoxC3();
             ChromeC3 chromeC3 = new ChromeC3();
             InternetExplorerC3 internetExplorerC3 = new InternetExplorerC3();
@@ -64,10 +77,52 @@ namespace Curs1
             edgeC3.About();
             edgeC3.NewFeatureFunction();
 
+
+
+
+            //Curs4 - Practice
+
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Curs 4");
+            Console.WriteLine("--------------------------------------");
+
+            FirefoxC4 firefoxC4 = new FirefoxC4();
+            Skype skype = new Skype();
+
+            firefoxC4.StartBrowser();
+            firefoxC4.WindowWidht = 1080;
+            Console.WriteLine(firefoxC4.WindowWidht);
+            firefoxC4.WindowWidht = 1000;
+            Console.WriteLine(firefoxC4.WindowWidht);
+            firefoxC4.About();
+            firefoxC4.Ping();
+
+            skype.About();
+            skype.Ping();
+
+            //Curs5 - Practice
+
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Curs 5");
+            Console.WriteLine("--------------------------------------");
+
+            BrowserC5 browserC5 = new BrowserC5();
+            browserC5.SendTextToElement();
+            BrowserC5a browserC5a = new BrowserC5a();
+            browserC5a.SendTextToElement();
+            BrowserC5b browserC5b = new BrowserC5b();
+            //browserC5b.SendTextToElement();
+
+
+
+
+
+
+
+
+
+
             Console.ReadLine();
-
-
-
 
         }
     }
