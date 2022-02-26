@@ -4,6 +4,7 @@ using CSharpAutoTraining.Curs2;
 using CSharpAutoTraining.Curs3;
 using CSharpAutoTraining.Curs4;
 using CSharpAutoTraining.Curs5;
+using CSharpAutoTraining.Curs6;
 
 namespace Curs1
 {
@@ -114,13 +115,30 @@ namespace Curs1
             //browserC5b.SendTextToElement();
 
 
+            //Curs6 - Practice
+
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Curs 6");
+            Console.WriteLine("--------------------------------------");
+
+            var WindowWidth = 0;
+            FirefoxC6 firefoxC6a = new FirefoxC6();
+            FirefoxC6 firefoxC6b = new FirefoxC6(1920);
+            WindowWidth = firefoxC6b.GetWindowWidth();
+            Console.WriteLine("WindowWidth: " + WindowWidth);
+            FirefoxC6 firefoxC6c = new FirefoxC6(1500.5);
+            WindowWidth = firefoxC6c.GetWindowWidth();
+            Console.WriteLine("WindowWidth: " + WindowWidth);
+
+            HomePage homePage = new HomePage();
+            Console.WriteLine("Image: " + homePage.Image);
 
 
+            //Curs7 - Practice
 
-
-
-
-
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Curs 7");
+            Console.WriteLine("--------------------------------------");
 
             Console.ReadLine();
 
