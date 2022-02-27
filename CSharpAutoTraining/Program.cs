@@ -5,10 +5,13 @@
 // using CSharpAutoTraining.Course3_HW;
 // using CSharpAutoTraining.Course4.AbstractClasses;
 // using CSharpAutoTraining.Course4.Interfaces;
-using CSharpAutoTraining.Course4_HW;
+// using CSharpAutoTraining.Course4_HW;
 // using CSharpAutoTraining.Course5;
-using CSharpAutoTraining.Course5_HW;
+// using CSharpAutoTraining.Course5_HW;
+// using CSharpAutoTraining.Course6;
+using CSharpAutoTraining.Course6_HW;
 using System;
+using System.Collections.Generic;
 
 namespace Course1
 {
@@ -240,7 +243,7 @@ namespace Course1
             */
 
 
-            /* -----------------COURSE 4 HOMEWORK----------------- */
+            /* -----------------COURSE 4 HOMEWORK-----------------
 
             // Create instances
             CSharpAutoTraining.Course4_HW.Firefox f = new CSharpAutoTraining.Course4_HW.Firefox();
@@ -260,6 +263,8 @@ namespace Course1
             s.About();
             s.Ping();
             Console.WriteLine();
+
+            */
 
 
             /*-----------------COURSE 5-----------------
@@ -285,7 +290,7 @@ namespace Course1
             */
 
 
-            /*-----------------COURSE 5 HOMEWORK-----------------S*/
+            /*-----------------COURSE 5 HOMEWORK-----------------
 
             // Create instances
             Browser5_1 b1 = new Browser5_1();
@@ -306,9 +311,120 @@ namespace Course1
             Console.WriteLine("BROWSER5_3");
             // b3.SendTextToElement();  - visible only in the containing class!
 
+            */
+
+
+            /*-----------------COURSE 6-----------------
+
+            // Method returning an object
+            Console.WriteLine("CONSTRUCTORS & METHODS");
+            var start = new Start();
+            var browser = start.CreateBrowser();
+            Console.WriteLine("Browser's Window Width: " + browser.GetWindowWidth());
+
+
+            // Arrays
+            Console.WriteLine("\n\nARRAYS");
+            string[] browserTypes = {"chrome", "firefox", "ie"};
+            browserTypes[0] = "edge";
+
+            // Display array's elements - variant 1
+            Console.WriteLine("\nDisplay Array's Elements:");
+            Console.WriteLine("browserTypes[0]: " + browserTypes[0]);
+            Console.WriteLine("browserTypes[1]: " + browserTypes[1]);
+            Console.WriteLine("browserTypes[2]: " + browserTypes[2]);
+
+            // Display array's elements - variant 2
+            Console.WriteLine("\nDisplay Array's Elements with FOR");
+            for(int i=0; i<browserTypes.Length; i++)
+            {
+                Console.WriteLine("browserTypes[" + i + "]: " + browserTypes[i]);
+            }
+
+            // Display array's elements - variant 3
+            Console.WriteLine("\nDisplay Array's Elements with FOREACH");
+            foreach(var browserType in browserTypes)
+            {
+                Console.WriteLine(browserType);
+            }
+
+
+            // Lists
+            Console.WriteLine("\n\nLISTS");
+            List<string> browserTypesList = new List<string>() { "chrome", "firefox", "ie" };
+
+            // Add an element to the list
+            Console.WriteLine("\nADD ELEMENTS TO THE LIST");
+            browserTypesList.Add("edge");
+            browserTypesList.Add("opera");
+            browserTypesList.Add("safari");
+            foreach (var browserType in browserTypesList)
+            {
+                Console.WriteLine(browserType);
+            }
+
+            // Add a set of elements to the list
+            Console.WriteLine("\nADD SET OF ELEMENTS TO THE LIST");
+            List<string> newBrowserTypesList = new List<string>() { "opera gx", "tor", "lynx" };
+            browserTypesList.AddRange(newBrowserTypesList);
+            foreach (var browserType in browserTypesList)
+            {
+                Console.WriteLine(browserType);
+            }
+
+            // Remove an element from the list
+            Console.WriteLine("\nREMOVE AN ELEMENT FROM THE LIST");
+            browserTypesList.Remove("opera gx");
+            browserTypesList.Remove("tor");
+            browserTypesList.Remove("ie");
+            foreach (var browserType in browserTypesList)
+            {
+                Console.WriteLine(browserType);
+            }
+
+            // Remove an element from a specific position from the list
+            Console.WriteLine("\nREMOVE AN ELEMENT FROM A SPECIFIC POSITION FROM THE LIST");
+            browserTypesList.RemoveAt(0);
+            browserTypesList.RemoveAt(1);
+            browserTypesList.RemoveAt(2);
+            foreach (var browserType in browserTypesList)
+            {
+                Console.WriteLine(browserType);
+            }
+
+            */
+
+
+            /*-----------------COURSE 6 HOMEWORK-----------------*/
+
+
+            Console.WriteLine("EXERCISE 1\n");
+
+            // Create the objects with the three constructors
+            Console.WriteLine("Creating Firefox objects: ");
+            Firefox f1 = new Firefox();         // Default
+            Firefox f2 = new Firefox(1920);     // Int value
+            Firefox f3 = new Firefox(2048.25);   // Double value
+
+            // Display the value returned by GetWindowWidth() method
+            Console.WriteLine("\nDisplay WindowWidth value for every Firefox objects: ");
+            int val;
+            val = f1.GetWindowWidth();
+            Console.WriteLine("WindowWidth for the first Firefox browser: " + val);
+            val = f2.GetWindowWidth();
+            Console.WriteLine("WindowWidth for the second Firefox browser: " + val);
+            val = f3.GetWindowWidth();
+            Console.WriteLine("WindowWidth for the third Firefox browser: " + val);
+
+
+            Console.WriteLine("\n\nEXERCISE 2");
+
+            // Create a HomePage object and print the XPaths
+            HomePage hp = new HomePage();
+            hp.DisplayXPaths();
+
             Console.ReadLine();
             
         }
     }
-
 }

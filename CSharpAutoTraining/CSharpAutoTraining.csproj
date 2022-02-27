@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.13.2\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.13.2\build\NUnit.props')" />
+  <Import Project="..\packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,6 +15,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.13.2.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.13.2\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,16 +53,60 @@
   <ItemGroup>
     <Compile Include="Course1\Browser.cs" />
     <Compile Include="Course2\DataTypes.cs" />
+    <Compile Include="Course2_HW\Browsers.cs" />
+    <Compile Include="Course2_HW\Chrome.cs" />
+    <Compile Include="Course2_HW\Firefox.cs" />
+    <Compile Include="Course2_HW\InternetExplorer.cs" />
+    <Compile Include="Course3\Browser.cs" />
+    <Compile Include="Course3\Firefox.cs" />
+    <Compile Include="Course3\InternetExplorer.cs" />
+    <Compile Include="Course3_HW\Browser.cs" />
+    <Compile Include="Course3_HW\Chrome.cs" />
+    <Compile Include="Course3_HW\Edge.cs" />
+    <Compile Include="Course3_HW\Firefox.cs" />
+    <Compile Include="Course3_HW\InternetExplorer.cs" />
+    <Compile Include="Course4\AbstractClasses\Browser.cs" />
+    <Compile Include="Course4\AbstractClasses\Firefox.cs" />
+    <Compile Include="Course4\AbstractClasses\InternetExplorer.cs" />
+    <Compile Include="Course4\Interfaces\Browser.cs" />
+    <Compile Include="Course4\Interfaces\Component.cs" />
+    <Compile Include="Course4\Interfaces\Firefox.cs" />
+    <Compile Include="Course4\Interfaces\Skype.cs" />
+    <Compile Include="Course4_HW\Browser.cs" />
+    <Compile Include="Course4_HW\Firefox.cs" />
+    <Compile Include="Course4_HW\IComponent.cs" />
+    <Compile Include="Course4_HW\INetwork.cs" />
+    <Compile Include="Course4_HW\Skype.cs" />
+    <Compile Include="Course5\BrowserB.cs" />
+    <Compile Include="Course5\Firefox.cs" />
+    <Compile Include="Course5\Math.cs" />
+    <Compile Include="Course5_HW\Browser5_1.cs" />
+    <Compile Include="Course5_HW\Browser5_2.cs" />
+    <Compile Include="Course5_HW\Browser5_3.cs" />
+    <Compile Include="Course5_HW\BrowserHelper.cs" />
+    <Compile Include="Course6\Browser.cs" />
+    <Compile Include="Course6\Start.cs" />
+    <Compile Include="Course6_HW\Firefox.cs" />
+    <Compile Include="Course6_HW\HomePage.cs" />
+    <Compile Include="Course7\TestClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Course2_HW\" />
+    <Folder Include="Course7_HW\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.13.2\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.13.2\build\NUnit.props'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
