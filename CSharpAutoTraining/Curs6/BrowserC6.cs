@@ -9,7 +9,7 @@ namespace CSharpAutoTraining.Curs6
 
     class BrowserC6
     {
-        private int WindowWidth = 1890;
+        public int WindowWidth = 1890;
         public int GetWindowWidth()
         {
             return WindowWidth;

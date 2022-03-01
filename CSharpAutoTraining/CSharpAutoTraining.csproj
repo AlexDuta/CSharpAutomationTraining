@@ -69,8 +69,13 @@
     <Compile Include="Curs4_Tema\Skype.cs" />
     <Compile Include="Curs5\BrowserC5.cs" />
     <Compile Include="Curs5\Math1.cs" />
+    <Compile Include="Curs5_Tema\Browser5tema.cs" />
+    <Compile Include="Curs5_Tema\BrowserHelper.cs" />
     <Compile Include="Curs6\BrowserC6.cs" />
+    <Compile Include="Curs6\Firefox.cs" />
     <Compile Include="Curs6\Start.cs" />
+    <Compile Include="Curs6_tema\Firefox.cs" />
+    <Compile Include="Curs6_tema\HomePage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

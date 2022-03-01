@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpAutoTraining.Curs6
 {
-    class Start
+    internal class Firefox
     {
-        public BrowserC6 CreateBrowser()
-        {
-            return new BrowserC6();
-        }
     }
 }
