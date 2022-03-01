@@ -1,8 +1,13 @@
 ﻿//using CSharpAutoTraining.Course1;
 //using CSharpAutoTraining.Course3;
 //using CSharpAutoTraining.Course2_Tema;
-using CSharpAutoTraining.Course3_Tema;
+//using CSharpAutoTraining.Course3_Tema;
+//using CSharpAutoTraining.Curs4;
+using CSharpAutoTraining.Curs4_Tema;
+//using CSharpAutoTraining.Curs5;
+//using CSharpAutoTraining.Curs6;
 using System;
+using System.Collections.Generic;
 
 namespace Curs1
 {
@@ -10,6 +15,61 @@ namespace Curs1
     {
         static void Main(string[] args)
         {
+            // curs 4 - tema
+            Firefox ff = new Firefox();
+            ff.StartBrowser();
+            ff.About();
+            ff.Ping();
+
+           Skype skype = new Skype();
+            skype.About();
+            skype.Ping();
+                
+
+            //ff.ChangeWindowWidth(1000);
+           ff.WindowWidth = -1025;
+
+          
+
+            
+            /*
+            // curs 6
+            var start= new Start();
+            var browser = start.CreateBrowser()
+                               .GetWindowWidth();
+
+            // arrays
+            string[] browsersType = { "chrome", "firefox", "ie" };
+            browsersType[0] = "edge";
+            for (int i = 0; i < browsersType.Length; i++)
+            {
+                Console.WriteLine(browsersType[i]);
+            }
+
+            foreach (var browserType in browsersType)
+            {
+                Console.WriteLine(browserType);
+            }
+            List<string> browserTypeList = new List<string>() { "chrome", "ceva" };
+       
+            */
+            /*   Curs 5
+            Firefox ff = new Firefox();
+            InternetExplorer ie=new InternetExplorer();
+            ff.About();
+            ie.About();
+
+          //  ff.ChangeWindowWidth(-1);
+            ff.WindowWidth = -4;
+
+            Math1 math = new Math1();
+            //math.Division(2, 0);
+            math.Division(2, 2);
+
+            BrowserC5 browser5 = new BrowserC5();
+            
+            */
+            /*
             /////////////////////// TEMA 3 ////////////////////////
             Edge edge = new Edge();
             Firefox firefox= new Firefox();
@@ -30,7 +90,7 @@ namespace Curs1
             edge.NewFeatureFunction();
 
 
-            /*
+            
             //////////////////////////////////   TEMA 2 //////////////////////////////
             Browser browser = new Browser();
             Firefox firefox= new Firefox();
