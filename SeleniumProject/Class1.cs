@@ -9,13 +9,104 @@ using OpenQA.Selenium;
 using System.IO;
 using System.Reflection;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Interactions;
 
 namespace SeleniumProject
 {
-
+    
     [TestFixture]
+
     public class Class1
     {
+       
+        //[SetUp] - method will be called before each test method (e.g. create a new driver instance)
+        public IWebDriver driver;
+        [SetUp]
+        public void SetUp()
+        {
+            driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Drivers");
+            driver.Url = "C:/CSharp_Automation/CSharpAutomationTraining/dashboardpage.html";
+        }
+        public void SetUp2()
+        {
+            driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Drivers");
+            driver.Url = "C:/CSharp_Automation/CSharpAutomationTraining/homepage.html";
+        }
+
+        //[TearDown] - method will be called after each test method (e.g. call driver.Quit())
+        [TearDown]
+        public void TearDown()
+        {
+            driver.Quit();
+        }
+        /* Curs 9 - tema*/
+        [Test]
+        public void TestCurs9Tema1()
+        {
+            SetUp2();
+            var loginButton = driver.FindElement(By.XPath("//button[@id='Login']"));
+            loginButton.Click();
+            Assert.True(driver.FindElement(By.Id("emailErrorText")).Displayed);
+            Assert.True(driver.FindElement(By.Id("passwordErrorText")).Displayed);
+           driver.Navigate().Refresh();
+            Assert.False(driver.FindElement(By.Id("emailErrorText")).Displayed);
+            Assert.False(driver.FindElement(By.Id("passwordErrorText")).Displayed);
+            TearDown();
+        }
+
+        public IWebDriver GetDriver()
+        {
+            return driver;
+        }
+
+        [Test]
+        public void testHeaderFooterLinks()
+        {
+            SetUp();
+            var elements = driver.FindElements(By.XPath("//header//a/@href"));
+            foreach (WebElement elm in elements)
+            {
+                Assert.True(elm.Displayed);
+            }
+            TearDown();
+
+           
+
+        }
+        /* Curs 9 */
+        [Test]
+        public void TestCurs9()
+        {
+            SetUp();
+            var bikeCheckBox = driver.FindElement(By.XPath("//input[@value='Bike']"));
+            bikeCheckBox.Click();
+            Assert.AreEqual(true, bikeCheckBox.Selected); // returneaza bool
+
+            SelectElement a = new SelectElement(driver.FindElement(By.Id("htmlversions")));
+            a.SelectByText("HTML 5");
+            a.SelectByValue("2");
+
+            var fileInput = driver.FindElement(By.Name("picture"));
+            fileInput.SendKeys("C:/CSharp_Automation/CSharpAutomationTraining/rebe.png");
+
+     //refresh
+            Actions action = new Actions(driver); 
+            action.SendKeys(Keys.F5).Perform();
+
+            var textArea = driver.FindElement(By.Id("textArea"));
+            textArea.Click();
+           // textArea.SendKeys("hello");
+           //selectez text ctr+a
+           action.KeyDown(Keys.Control).SendKeys("a").KeyUp(Keys.Control).Perform();
+            //copiez textul ctr+c
+            action.KeyDown(Keys.Control).SendKeys("c").KeyUp(Keys.Control).Perform();
+            //pun textul
+            action.KeyDown(Keys.Control).SendKeys("v").KeyUp(Keys.Control).Perform();
+            TearDown();
+
+
+        }
         /*Curs 8 - tema */
         [Test]
         public void TestPageTitle()
@@ -58,6 +149,7 @@ namespace SeleniumProject
             IWebDriver driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Drivers");
             driver.Url = "C:/CSharp_Automation/CSharpAutomationTraining/homepage.html";
             var elements = driver.FindElements(By.XPath("//a/@href"));
+         //   var getAttribute = elements.GetAttribute("value");
             foreach (var elm in elements)
             {
                 Assert.True(elm.Displayed);
