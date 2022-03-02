@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard page</title>
+<style>
+
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+    #myDivHeader {
+  display: block;
+  text-align: center;
+}
+
+</style>
+</head>
+
+<body style="background-color:powderblue;" onload="myFunction()" style="margin:0;">
+
+<!--header start-->
+<div id="header">
+<hr>
+
+<a href="https://en.wikipedia.org/wiki/HTML">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/HTML.svg/200px-HTML.svg.png" width="104" height="142">
+</a>
+
+<div id="myDivHeader">
+
+
+<header> 
+<ul id="navHeader"  style="display:inline">
+    <a href="homepage.html" style="padding-left:5em">Home</a>
+    <a href="wikipage.html" style="padding-left:5em">WikiPage</a>
+</ul>
+</header>
+</div>
+<hr>
+</div>
+<!--header end-->
+
+<h1>Dashboard page</h1>
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  
+  <p>Welcome to dashboard page</p>
+  <br>
+  <p id="detailsSavedMessage" style="color:#006400"></p>
+  <br>
+<form>
+  <label>First Name:</label>
+  <input id="firstname" value="Dave"/><br>
+  <label>Last Name:</label>
+  <input value="David"/><br><br>
+   
+  <input type="radio" name="gender" value="male" checked> Male<br> 
+  <input type="radio" name="gender" value="female"> Female<br><br>
+  <input type="checkbox" name="vehicle1" value="Bike">I have a bike<br>
+  <input type="checkbox" name="vehicle2" value="Car">I have a car<br><br>
+  <label>Birthday:</label>
+  <input type="date" name="bday"><br><br>
+  <input type="file" name="picture" accept="image/*"> <br>
+  <select id="htmlversions" onChange=selectHtmlVersion()>
+	<option value="no value">Please select</option>
+	<option value="2">HTML 2.0</option>
+    <option value="3.2">HTML 3.2</option>
+    <option value="4.0">HTML 4.0</option>
+    <option value="5">HTML 5</option>
+  </select>
+  <p>
+  <textarea id="textArea" style="width: 600px; height: 300px;"></textarea>
+</form>
+  
+  <br><br>   
+  <button type="submit" id="SaveDetails" onClick="saveDetails()">Save</button>
+  
+  <br><br>
+  <button type="submit" id="Logout" onClick="logout()">Logout</button>
+
+ 
+</div>
+
+
+<hr>
+
+<footer>
+<ul id="nav">
+    <li><a href="homepage.html">Home</a></li>
+    <li><a href="wikipage.html">WikiPage</a></li>
+    <li><a href="#">Contact (NA)</a></li>
+</ul>
+</footer>
+
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, Math.floor((Math.random() * 0) + 0));
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+function logout(){
+window.location.href  = "homepage.html";
+}
+
+function saveDetails() {
+	document.getElementById("detailsSavedMessage").innerHTML = "Details saved";
+}
+
+</script>
+
+</body>
+</html>
