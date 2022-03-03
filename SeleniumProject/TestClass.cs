@@ -11,6 +11,59 @@ namespace SeleniumProject
     [TestFixture]
     public class Test
     {
+         public IWebDriver driver;
+        [SetUp]
+        public void SetUp()
+        {
+            driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Drivers");
+            driver.Url = "file:///C:/Workspace/homepage.html";
+        }
+        [TearDown]
+        public void TearDown()
+        {
+            driver.Quit();
+        }
+
+        [Test]
+        public void Curs9Test()
+        {
+            IWebElement LoginBtn = driver.FindElement(By.Id("Login"));
+            LoginBtn.Click();
+            Assert.True(driver.FindElement(By.Id("emailErrorText")).Displayed);
+            Assert.True(driver.FindElement(By.Id("passwordErrorText")).Displayed);
+
+            /*Actions action = new Actions(driver);
+            action.KeyDown(Keys.Control).SendKeys("r").Perform();*/
+            driver.Navigate().Refresh();
+
+            Assert.False(driver.FindElement(By.Id("emailErrorText")).Displayed);
+            Assert.False(driver.FindElement(By.Id("passwordErrorText")).Displayed);
+
+        }
+
+        [Test]
+        public void HeaderLinksTest()
+        {
+            IWebElement header = driver.FindElement(By.Id("header"));
+            var elements = header.FindElements(By.XPath(".//a"));
+            foreach (var element in elements)
+            {
+                Assert.True(element.Displayed);
+            }
+        }
+
+        [Test]
+        public void FooterLinksTest()
+        {
+            IWebElement footer = driver.FindElement(By.XPath("//footer"));
+            var elements = footer.FindElements(By.XPath(".//a"));
+            foreach (var element in elements)
+            {
+                Assert.True(element.Displayed, "error");
+            }
+        }
+
+        /*--tema8
         [Test]
         public void FirstSeleniumTest()
         {
@@ -79,7 +132,8 @@ namespace SeleniumProject
 
         }
 
-        /*--tema 7
+        --tema 7
+
         [Test]
         public void TestMethod1()
         {
