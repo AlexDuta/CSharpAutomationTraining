@@ -64,11 +64,17 @@
     <Compile Include="Curs5\Browser5_2.cs" />
     <Compile Include="Curs5\Browser5_3.cs" />
     <Compile Include="Curs5\BrowserHelper.cs" />
+    <Compile Include="Curs6\Firefox.cs" />
+    <Compile Include="Curs6\HomePage.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Curs7\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
