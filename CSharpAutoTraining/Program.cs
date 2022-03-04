@@ -1,4 +1,4 @@
-﻿using CSharpAutoTraining.Course5;
+﻿using CSharpAutoTraining.Course6;
 using System;
 
 namespace Curs1
@@ -161,8 +161,27 @@ namespace Curs1
 
             //Course 5
 
-            Browser br = new Browser();
-            br.SendTextToElement();
+            //Browser br = new Browser();
+            //br.SendTextToElement();
+
+            //Console.ReadLine();
+
+            //Course 6
+
+            int val;
+
+            Firefox ff1 = new Firefox();
+            Firefox ff2 = new Firefox(1920);
+            Firefox ff3 = new Firefox(2080.63);
+
+            val = ff1.GetWindowWidth();
+            Console.WriteLine(val);
+
+            val = ff2.GetWindowWidth();
+            Console.WriteLine(val);
+
+            val = ff3.GetWindowWidth();
+            Console.WriteLine(val);
 
             Console.ReadLine();
 

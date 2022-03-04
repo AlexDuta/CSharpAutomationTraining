@@ -61,7 +61,9 @@
     <Compile Include="Course4\Skype.cs" />
     <Compile Include="Course5\Browser.cs" />
     <Compile Include="Course5\BrowserHelper.cs" />
-    <Compile Include="Test.cs" />
+    <Compile Include="Course6\Firefox.cs" />
+    <Compile Include="Course6\HomePage.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
