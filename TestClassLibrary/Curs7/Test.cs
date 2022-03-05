@@ -20,7 +20,7 @@ namespace TestClassLibrary.Curs7
         [Test]
         public void testStartBrowserFalse()
         {
-            Assert.False(b.StartBrowser());
+            Assert.False(!b.StartBrowser());
         }
 
         [Test]
