@@ -11,12 +11,14 @@ using System.Reflection;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
+using System.Threading;
+using SeleniumExtras.WaitHelpers;
 
 namespace SeleniumProject
 {
     
     [TestFixture]
-
+    
     public class Class1
     {
        
@@ -26,7 +28,7 @@ namespace SeleniumProject
         public void SetUp()
         {
             driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Drivers");
-            driver.Url = "C:/CSharp_Automation/CSharpAutomationTraining/dashboardpage.html";
+            driver.Url = "C:/CSharp_Automation/CSharpAutomationTraining/wikipage.html";
         }
         public void SetUp2()
         {
@@ -38,7 +40,60 @@ namespace SeleniumProject
         [TearDown]
         public void TearDown()
         {
-            driver.Quit();
+           // driver.Quit();
+        }
+        /* Curs 10 - tema */
+        /* Curs 10*/
+        [Test]
+        public void TestWaits()
+        {
+            //  Thread.Sleep(4000);
+
+            // WaitElemetToBeVisible(driver, By.Id("htmlVersion"),5);
+
+           // DefaultWait<IWebDriver> defaultWait = new DefaultWait<IWebDriver>(driver);
+           // defaultWait.Timeout = TimeSpan.FromSeconds(5);
+           // defaultWait.PollingInterval = TimeSpan.FromMilliseconds(250);
+           // defaultWait.IgnoreExceptionTypes(typeof(NoSuchElementException), typeof(ElementNotInteractableException));
+           // defaultWait.Message = "Element ";
+            //defaultWait.Until(driver =>driver.FindElement(By.Id("htmlVersion")).Displayed);
+           
+            driver.Manage().Timeouts().ImplicitWait= TimeSpan.FromSeconds(5);
+            driver.FindElement(By.Id("htmlVersion")).SendKeys("test");
+            var isPresent = IsElementPresent(By.Id("htmlVersion"));
+            Assert.IsTrue(isPresent);
+
+            // navigate
+            driver.Navigate().GoToUrl("https://www.google.com");
+            Thread.Sleep(2000);
+            driver.Navigate().Back();
+            Thread.Sleep(2000);
+            driver.Navigate().Forward();
+            Thread.Sleep(2000);
+            driver.Navigate().Refresh();
+
+
+        }
+        //element vizibil si prezent in html
+        public void WaitElemetToBeVisible( IWebDriver driver , By elementBy , int timeout)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeout));
+       
+            wait.Until(ExpectedConditions.ElementIsVisible(elementBy));
+
+        }
+
+        private bool IsElementPresent(By element)
+        {
+            try
+            {
+                driver.FindElement(element);
+                return true;
+            }
+            catch(NoSuchElementException e)
+            {
+                return false;
+            }
         }
         /* Curs 9 - tema*/
         [Test]

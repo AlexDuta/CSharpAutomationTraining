@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wiki page</title>
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+  }
+  
+    #myDivHeader {
+  display: block;
+  text-align: center;
+}
+
+</style>
+</head>
+
+<body style="background-color:powderblue;" onload="myFunction()" style="margin:0;">
+
+<!--header-->
+<div id="header">
+<hr>
+
+<a href="https://en.wikipedia.org/wiki/HTML">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/HTML.svg/200px-HTML.svg.png" width="104" height="142">
+</a>
+
+<div id="myDivHeader">
+
+
+<header> 
+<ul id="navHeader"  style="display:inline">
+    <a href="homepage.html" style="padding-left:5em">Home</a>
+    <a href="wikipage.html" style="padding-left:5em">WikiPage</a>
+</ul>
+</header>
+</div>
+<hr>
+</div>
+<!--header end-->
+
+<h1>WikiPage</h1>
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  
+  <p>The World Wide Web is composed primarily of HTML documents transmitted from web servers to web browsers using the Hypertext Transfer Protocol (HTTP). However, HTTP is used to serve images, sound, and other content, in addition to HTML. To allow the web browser to know how to handle each document it receives, other information is transmitted along with the document. This meta data usually includes the MIME type (e.g. text/html or application/xhtml+xml) and the character encoding (see Character encoding in HTML).</p>
+  <a href='https://en.wikipedia.org/wiki/HTML'>More</a>
+<form>
+  <select id="htmlversions" onChange=selectHtmlVersion()>
+	<option value="no value">Please select</option>
+	<option value="2">HTML 2.0</option>
+    <option value="3.2">HTML 3.2</option>
+    <option value="4.0">HTML 4.0</option>
+    <option value="5">HTML 5</option>
+  </select>
+</form>
+
+<p>
+<textarea id="htmlVersion"></textarea>
+</p>
+</div>
+
+<div>
+  
+  
+
+</div>
+
+<hr>
+<footer>
+<ul id="nav">
+    <li><a href="homepage.html">Home</a></li>
+    <li><a href="wikipage.html">WikiPage</a></li>
+    <li><a href="#">Contact (NA)</a></li>
+</ul>
+</footer>
+
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, Math.floor((Math.random() * 5000) + 100));
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+function selectHtmlVersion() {
+  var x = document.getElementById("htmlversions").value;
+  document.getElementById("htmlVersion").innerHTML = "Current selection: " + x;
+}
+</script>
+
+</body>
+</html>
