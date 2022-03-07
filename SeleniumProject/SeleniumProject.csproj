@@ -58,9 +58,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestBase.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Curs7\Browser.cs" />
+    <Compile Include="DashBoardPage.cs" />
+    <Compile Include="Homepage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests.cs" />
+    <Compile Include="WikiPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

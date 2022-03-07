@@ -118,16 +118,16 @@ namespace SeleniumProject
         [Test]
         public void testHeaderFooterLinks()
         {
-            SetUp();
-            var elements = driver.FindElements(By.XPath("//header//a/@href"));
-            foreach (WebElement elm in elements)
+            IWebDriver driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Drivers");
+            driver.Url = "C:/CSharp_Automation/CSharpAutomationTraining/homepage.html";
+            var element = driver.FindElements(By.XPath("//a/@href"));
+
+            foreach (var elm in element)
             {
                 Assert.True(elm.Displayed);
             }
-            TearDown();
 
-           
-
+          
         }
         /* Curs 9 */
         [Test]
@@ -204,12 +204,12 @@ namespace SeleniumProject
             IWebDriver driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Drivers");
             driver.Url = "C:/CSharp_Automation/CSharpAutomationTraining/homepage.html";
             var elements = driver.FindElements(By.XPath("//a/@href"));
-         //   var getAttribute = elements.GetAttribute("value");
+         
             foreach (var elm in elements)
             {
                 Assert.True(elm.Displayed);
             }
-            driver.Quit();
+         
         }
         /*Curs 8*/
         [Test]
