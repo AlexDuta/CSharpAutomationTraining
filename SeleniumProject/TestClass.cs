@@ -1,29 +1,29 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System.IO;
-using System.Reflection;
 using OpenQA.Selenium.Support.UI;
-using OpenQA.Selenium.Interactions;
+using System;
 
 namespace SeleniumProject
 {
     [TestFixture]
-    public class Test
+    public class TestClass : TestBase
     {
-         public IWebDriver driver;
-        [SetUp]
-        public void SetUp()
+        
+        [Test]
+        public void Curs10Test()
         {
-            driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Drivers");
-            driver.Url = "file:///C:/Workspace/homepage.html";
-        }
-        [TearDown]
-        public void TearDown()
-        {
-            driver.Quit();
+            driver.FindElement(By.XPath(".//*[@id='navHeader']/a[2]")).Click(); 
+            WaitElementToBeVisible(driver, By.XPath(".//*[@id='htmlVersion']"), 10); 
+            driver.FindElement(By.XPath(".//*[@id='htmlVersion']")).SendKeys("aaa");
         }
 
+        public void WaitElementToBeVisible(IWebDriver driver, By element, int timeOut) 
+        { 
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeOut)); 
+            var waitCondition = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(element));
+        }
+
+        /* --tema9
         [Test]
         public void Curs9Test()
         {
@@ -32,8 +32,6 @@ namespace SeleniumProject
             Assert.True(driver.FindElement(By.Id("emailErrorText")).Displayed);
             Assert.True(driver.FindElement(By.Id("passwordErrorText")).Displayed);
 
-            /*Actions action = new Actions(driver);
-            action.KeyDown(Keys.Control).SendKeys("r").Perform();*/
             driver.Navigate().Refresh();
 
             Assert.False(driver.FindElement(By.Id("emailErrorText")).Displayed);
@@ -63,7 +61,7 @@ namespace SeleniumProject
             }
         }
 
-        /*--tema8
+        --tema8
         [Test]
         public void FirstSeleniumTest()
         {
